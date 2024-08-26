@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2024, WSO2 LLC. (http://www.wso2.com). All Rights Reserved.
+  ~
+  ~ This software is the property of WSO2 LLC. and its suppliers, if any.
+  ~ Dissemination of any information or reproduction of any material contained
+  ~ herein is strictly forbidden, unless permitted by WSO2 in accordance with
+  ~ the WSO2 Software License available at: https://wso2.com/licenses/eula/3.2
+  ~ For specific language governing the permissions and limitations under
+  ~ this license, please see the license as well as any agreement you’ve
+  ~ entered into with WSO2 governing the purchase of this software and any
+  ~ associated services.
+  -->
+
+<template name="init" onError="fault" xmlns="http://ws.apache.org/ns/synapse">
+    <parameter name="base" description="The service root URL."/>
+    <parameter name="refreshToken" description="The refresh token that can be used to obtain a new access token."/>
+    <parameter name="clientId" description="Client ID of the registered application."/>
+    <parameter name="clientSecret" description="Client secret of the registered application."/>
+    <parameter name="tokenEndpoint" description="An HTTP endpoint that can be uses to obtain an access token."/>
+    <parameter name="developerToken" description="Represents the developer token your the Manager Account."/>
+    <sequence>
+        <property name="_OH_INTERNAL_CLIENT_ID_" expression="$func:clientId"/>
+        <property name="_OH_INTERNAL_TOKEN_ENDPOINT_" expression="$func:tokenEndpoint"/>
+        <class name="org.wso2.carbon.googleAdNetworkconnector.ClientCredentialsAccessTokenHandler"/>
+        <header name="developer-token" expression="$func:developerToken" scope="transport"/>
+        <filter source="boolean($ctx:_OH_INTERNAL_ACCESS_TOKEN_)" regex="true">
+            <then>
+                <header name="Authorization" expression="fn:concat('Bearer ', $ctx:_OH_INTERNAL_ACCESS_TOKEN_)" scope="transport"/>
+            </then>
+        </filter>
+    </sequence>
+</template>

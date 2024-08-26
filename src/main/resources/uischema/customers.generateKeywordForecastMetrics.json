@@ -1,0 +1,110 @@
+{
+  "connectorName": "googleAdNetwork",
+  "operationName": "customers.generateKeywordForecastMetrics",
+  "title": "Customers Generate Keyword Forecast Metrics",
+  "help": "<h1>Customers Generate Keyword Forecast Metrics</h1> <b>The customers.generateKeywordForecastMetrics operation.</b>",
+  "elements": [
+    {
+      "type": "attributeGroup",
+      "value": {
+        "groupName": "General",
+        "elements": [
+          {
+            "type": "attribute",
+            "value": {
+              "name": "configRef",
+              "displayName": "Connection",
+              "inputType": "connection",
+              "allowedConnectionTypes": [
+                "googleAdNetwork"
+              ],
+              "defaultType": "connection.googleAdNetwork",
+              "defaultValue": "",
+              "required": "true",
+              "helpTip": "Connection to be used"
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Search",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "search",
+                    "displayName": "Search",
+                    "inputType": "searchBox",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "Search for an attribute using the display name"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Parameters",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "customerId",
+                    "displayName": "Customer Id",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "The ID of the customer."
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Request Body",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "forecastPeriod",
+                    "displayName": "Forecast Period",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "The date range for the forecast. The start date must be in the future and end date must be within 1 year from today. The reference timezone used is the one of the Google Ads account belonging to the customer. If not set, a default date range from next Sunday to the following Saturday will be used. Type: object (DateRange)"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "campaign",
+                    "displayName": "Campaign",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "true",
+                    "helpTip": "Required. The campaign used in the forecast. Type: object (CampaignToForecast)"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "currencyCode",
+                    "displayName": "Currency Code",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "The currency used for exchange rate conversion. By default, the account currency of the customer is used. Set this field only if the currency is different from the account currency. The list of valid currency codes can be found athttps:\/\/developers.google.com\/google-ads\/api\/data\/codes-formats#currency-codes. Type: string"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

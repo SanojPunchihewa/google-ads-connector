@@ -1,0 +1,88 @@
+{
+  "connectorName": "googleAdNetwork",
+  "operationName": "customers.startIdentityVerification",
+  "title": "Customers Start Identity Verification",
+  "help": "<h1>Customers Start Identity Verification</h1> <b>The customers.startIdentityVerification operation.</b>",
+  "elements": [
+    {
+      "type": "attributeGroup",
+      "value": {
+        "groupName": "General",
+        "elements": [
+          {
+            "type": "attribute",
+            "value": {
+              "name": "configRef",
+              "displayName": "Connection",
+              "inputType": "connection",
+              "allowedConnectionTypes": [
+                "googleAdNetwork"
+              ],
+              "defaultType": "connection.googleAdNetwork",
+              "defaultValue": "",
+              "required": "true",
+              "helpTip": "Connection to be used"
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Search",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "search",
+                    "displayName": "Search",
+                    "inputType": "searchBox",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "Search for an attribute using the display name"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Parameters",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "customerId",
+                    "displayName": "Customer Id",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "true",
+                    "helpTip": "Required. The Id of the customer for whom we are creating this verification."
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Request Body",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "verificationProgram",
+                    "displayName": "Verification Program",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "true",
+                    "helpTip": "Required. The verification program type for which we want to start the verification. Type: enum (IdentityVerificationProgram)"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

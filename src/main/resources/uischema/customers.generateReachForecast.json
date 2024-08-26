@@ -1,0 +1,187 @@
+{
+  "connectorName": "googleAdNetwork",
+  "operationName": "customers.generateReachForecast",
+  "title": "Customers Generate Reach Forecast",
+  "help": "<h1>Customers Generate Reach Forecast</h1> <b>The customers.generateReachForecast operation.</b>",
+  "elements": [
+    {
+      "type": "attributeGroup",
+      "value": {
+        "groupName": "General",
+        "elements": [
+          {
+            "type": "attribute",
+            "value": {
+              "name": "configRef",
+              "displayName": "Connection",
+              "inputType": "connection",
+              "allowedConnectionTypes": [
+                "googleAdNetwork"
+              ],
+              "defaultType": "connection.googleAdNetwork",
+              "defaultValue": "",
+              "required": "true",
+              "helpTip": "Connection to be used"
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Search",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "search",
+                    "displayName": "Search",
+                    "inputType": "searchBox",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "Search for an attribute using the display name"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Parameters",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "customerId",
+                    "displayName": "Customer Id",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "true",
+                    "helpTip": "Required. The ID of the customer."
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Request Body",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "campaignDuration",
+                    "displayName": "Campaign Duration",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "true",
+                    "helpTip": "Required. Campaign duration. Type: object (CampaignDuration)"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "cookieFrequencyCapSetting",
+                    "displayName": "Cookie Frequency Cap Setting",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "Chosen cookie frequency cap to be applied to each planned product. This is equivalent to the frequency cap exposed in Google Ads when creating a campaign, it represents the maximum number of times an ad can be shown to the same user during a specified time interval. If not specified, a default of 0 (no cap) is applied. Type: object (FrequencyCap)"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "targeting",
+                    "displayName": "Targeting",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "The targeting to be applied to all products selected in the product mix. Type: object (Targeting)"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "plannedProducts",
+                    "displayName": "Planned Products",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "true",
+                    "helpTip": "Required. The products to be forecast. The max number of allowed planned products is 15. Type: object (PlannedProduct)"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "forecastMetricOptions",
+                    "displayName": "Forecast Metric Options",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "Controls the forecast metrics returned in the response. Type: object (ForecastMetricOptions)"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "currencyCode",
+                    "displayName": "Currency Code",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "The currency code. Three-character ISO 4217 currency code. Type: string"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "cookieFrequencyCap",
+                    "displayName": "Cookie Frequency Cap",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "Chosen cookie frequency cap to be applied to each planned product. This is equivalent to the frequency cap exposed in Google Ads when creating a campaign, it represents the maximum number of times an ad can be shown to the same user. If not specified, no cap is applied. Type: integer"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "minEffectiveFrequency",
+                    "displayName": "Min Effective Frequency",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "Chosen minimum effective frequency (the number of times a person was exposed to the ad) for the reported reach metrics [1-10]. This won't affect the targeting, but just the reporting. If not specified, a default of 1 is applied. Type: integer"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "effectiveFrequencyLimit",
+                    "displayName": "Effective Frequency Limit",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "The highest minimum effective frequency (the number of times a person was exposed to the ad) value [1-10] to include in Forecast.effective_frequency_breakdowns. If not specified, Forecast.effective_frequency_breakdowns will not be provided. Type: object (EffectiveFrequencyLimit)"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "customerReachGroup",
+                    "displayName": "Customer Reach Group",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "The name of the customer being planned for. This is a user-defined value. Type: string"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

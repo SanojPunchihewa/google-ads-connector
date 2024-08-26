@@ -1,0 +1,154 @@
+{
+  "connectorName": "googleAdNetwork",
+  "operationName": "customers.recommendations.generate",
+  "title": "Customers Recommendations Generate",
+  "help": "<h1>Customers Recommendations Generate</h1> <b>The customers.recommendations.generate operation.</b>",
+  "elements": [
+    {
+      "type": "attributeGroup",
+      "value": {
+        "groupName": "General",
+        "elements": [
+          {
+            "type": "attribute",
+            "value": {
+              "name": "configRef",
+              "displayName": "Connection",
+              "inputType": "connection",
+              "allowedConnectionTypes": [
+                "googleAdNetwork"
+              ],
+              "defaultType": "connection.googleAdNetwork",
+              "defaultValue": "",
+              "required": "true",
+              "helpTip": "Connection to be used"
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Search",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "search",
+                    "displayName": "Search",
+                    "inputType": "searchBox",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "Search for an attribute using the display name"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Parameters",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "customerId",
+                    "displayName": "Customer Id",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "true",
+                    "helpTip": "Required. The ID of the customer generating recommendations."
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Request Body",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "recommendationTypes",
+                    "displayName": "Recommendation Types",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "true",
+                    "helpTip": "Required. List of eligible recommendationTypes to generate. If the uploaded criteria isn't sufficient to make a recommendation, or the campaign is already in the recommended state, no recommendation will be returned for that type. Generally, a recommendation is returned if all required fields for that recommendationType are uploaded, but there are cases where this is still not sufficient. Type: enum (RecommendationType)"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "advertisingChannelType",
+                    "displayName": "Advertising Channel Type",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "true",
+                    "helpTip": "Required. Advertising channel type of the campaign. The following advertisingChannelTypes are supported for recommendation generation: PERFORMANCE_MAX and SEARCH Type: enum (AdvertisingChannelType)"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "adGroupInfo",
+                    "displayName": "Ad Group Info",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "Optional. Current AdGroup Information. Supports information from a single AdGroup. This field is optional for the following recommendationTypes: KEYWORD Type: object (AdGroupInfo)"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "campaignSitelinkCount",
+                    "displayName": "Campaign Sitelink Count",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "Optional. Number of sitelinks on the campaign. This field is necessary for the following recommendationTypes: SITELINK_ASSET Type: integer"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "conversionTrackingStatus",
+                    "displayName": "Conversion Tracking Status",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "Optional. Current conversion tracking status. This field is necessary for the following recommendationTypes: MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, MAXIMIZE_CONVERSION_VALUE_OPT_IN, SET_TARGET_CPA, SET_TARGET_ROAS, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN Type: enum (ConversionTrackingStatus)"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "biddingInfo",
+                    "displayName": "Bidding Info",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "Optional. Current bidding information of the campaign. This field is necessary for the following recommendationTypes: MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, MAXIMIZE_CONVERSION_VALUE_OPT_IN, SET_TARGET_CPA, SET_TARGET_ROAS, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN Type: object (BiddingInfo)"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "seedInfo",
+                    "displayName": "Seed Info",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "Optional. Seed information for Keywords. This field is necessary for the following recommendationTypes: KEYWORD Type: object (SeedInfo)"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

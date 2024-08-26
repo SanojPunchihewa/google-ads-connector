@@ -10,7 +10,7 @@
  * entered into with WSO2 governing the purchase of this software and any
  * associated services.
  */
-package org.wso2.healthcare.integration.common.ehr.auth;
+package org.wso2.carbon.googleAdNetworkconnector;
 
 /**
  * Interface of Token Store.

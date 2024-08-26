@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2024, WSO2 LLC. (http://www.wso2.com). All Rights Reserved.
+  ~
+  ~ This software is the property of WSO2 LLC. and its suppliers, if any.
+  ~ Dissemination of any information or reproduction of any material contained
+  ~ herein is strictly forbidden, unless permitted by WSO2 in accordance with
+  ~ the WSO2 Software License available at: https://wso2.com/licenses/eula/3.2
+  ~ For specific language governing the permissions and limitations under
+  ~ this license, please see the license as well as any agreement you’ve
+  ~ entered into with WSO2 governing the purchase of this software and any
+  ~ associated services.
+  -->
+
+<!-- Generated on 23-Fri, 08, 2024 16:11:19+0530 -->
+
+<template xmlns="http://ws.apache.org/ns/synapse" name="customers.productLinkInvitations.remove">
+    <!-- Path Parameter List -->
+    <parameter name="customerId" description="Required. The ID of the product link invitation being removed."/>
+    <!-- Request Body Parameter List -->
+    <parameter name="resourceName"
+               description="Required. The resource name of the product link invitation being removed. expected, in this format: Type: string"/>
+    <sequence>
+        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+            <property name="operationPath" value="/v17/customers/{customerId}/productLinkInvitations:remove"/>
+            <property name="pathParameters" value="customerId,"/>
+        </class>
+        <payloadFactory media-type="json" template-type="freemarker">
+            <format>
+                <![CDATA[{
+                                                                                        <#if (args.arg1)?has_content>
+                                    "resourceName": "${args.arg1}"                                </#if>
+                                                                                        }]]>
+            </format>
+            <args>
+                <arg evaluator="xml" expression="$func:resourceName"/>
+            </args>
+        </payloadFactory>
+        <property name="DISABLE_CHUNKING" scope="axis2" type="STRING" value="true"/>
+        <property name="messageType" value="application/json" scope="axis2"/>
+        <property name="ContentType" value="application/json" scope="axis2"/>
+        <header name="Accept" value="application/json" scope="transport" action="set"/>
+        <call>
+            <endpoint>
+                <http method="POST" uri-template="{uri.var.base}{+uri.var.urlPath}{+uri.var.urlQuery}"/>
+            </endpoint>
+        </call>
+        <!-- Remove custom header information -->
+        <header name="request-id" scope="transport" action="remove"/>
+        <header name="x-xss-protection" scope="transport" action="remove"/>
+        <header name="vary" scope="transport" action="remove"/>
+        <header name="alt-svc" scope="transport" action="remove"/>
+        <header name="server" scope="transport" action="remove"/>
+        <header name="access-control-allow-origin" scope="transport" action="remove"/>
+        <header name="access-control-allow-methods" scope="transport" action="remove"/>
+        <header name="x-content-type-options" scope="transport" action="remove"/>
+        <header name="access-control-allow-headers" scope="transport" action="remove"/>
+        <header name="x-frame-options" scope="transport" action="remove"/>
+        <header name="cache-control" scope="transport" action="remove"/>
+    </sequence>
+</template>

@@ -10,11 +10,10 @@
  * entered into with WSO2 governing the purchase of this software and any
  * associated services.
  */
-package org.wso2.healthcare.integration.common.ehr.auth;
+package org.wso2.carbon.googleAdNetworkconnector;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.wso2.healthcare.integration.common.ehr.Constants;
 
 /**
  * The TokenManager holds and manages the tokens.

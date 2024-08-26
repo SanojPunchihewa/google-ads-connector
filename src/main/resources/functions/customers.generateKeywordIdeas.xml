@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2024, WSO2 LLC. (http://www.wso2.com). All Rights Reserved.
+  ~
+  ~ This software is the property of WSO2 LLC. and its suppliers, if any.
+  ~ Dissemination of any information or reproduction of any material contained
+  ~ herein is strictly forbidden, unless permitted by WSO2 in accordance with
+  ~ the WSO2 Software License available at: https://wso2.com/licenses/eula/3.2
+  ~ For specific language governing the permissions and limitations under
+  ~ this license, please see the license as well as any agreement you’ve
+  ~ entered into with WSO2 governing the purchase of this software and any
+  ~ associated services.
+  -->
+
+<!-- Generated on 23-Fri, 08, 2024 16:11:19+0530 -->
+
+<template xmlns="http://ws.apache.org/ns/synapse" name="customers.generateKeywordIdeas">
+    <!-- Path Parameter List -->
+    <parameter name="customerId" description="The ID of the customer with the recommendation."/>
+    <!-- Request Body Parameter List -->
+    <parameter name="geoTargetConstants"
+               description="The resource names of the location to target. Maximum is 10. An empty list MAY be used to specify all targeting geos. Type: string"/>
+    <parameter name="includeAdultKeywords"
+               description="If true, adult keywords will be included in response. The default value is false. Type: boolean"/>
+    <parameter name="pageToken"
+               description="Token of the page to retrieve. If not specified, the first page of results will be returned. To request next page of results use the value obtained fromnextPageTokenin the previous response. The request fields must match across pages. Type: string"/>
+    <parameter name="pageSize"
+               description="Number of results to retrieve in a single page. A maximum of 10,000 results may be returned, if the pageSize exceeds this, it is ignored. If unspecified, at most 10,000 results will be returned. The server may decide to further limit the number of returned resources. If the response contains fewer than 10,000 results it may not be assumed as last page of results. Type: integer"/>
+    <parameter name="keywordPlanNetwork"
+               description="Targeting network. If not set, Google Search And Partners Network will be used. Type: enum (KeywordPlanNetwork)"/>
+    <parameter name="keywordAnnotation"
+               description="The keyword annotations to include in response. Type: enum (KeywordPlanKeywordAnnotation)"/>
+    <parameter name="aggregateMetrics"
+               description="The aggregate fields to include in response. Type: object (KeywordPlanAggregateMetrics)"/>
+    <parameter name="historicalMetricsOptions"
+               description="The options for historical metrics data. Type: object (HistoricalMetricsOptions)"/>
+    <parameter name="language"
+               description="The resource name of the language to target. Each keyword belongs to some set of languages; a keyword is included if language is one of its languages. If not set, all keywords will be included. Type: string"/>
+    <parameter name="keywordAndUrlSeed"
+               description="A Keyword and a specific Url to generate ideas from for example, cars, www.example.com/cars. Type: object (KeywordAndUrlSeed)"/>
+    <parameter name="keywordSeed"
+               description="A Keyword or phrase to generate ideas from, for example, cars. Type: object (KeywordSeed)"/>
+    <parameter name="urlSeed"
+               description="A specific url to generate ideas from, for example, www.example.com/cars. Type: object (UrlSeed)"/>
+    <parameter name="siteSeed"
+               description="The site to generate ideas from, for example, www.example.com. Type: object (SiteSeed)"/>
+    <sequence>
+        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+            <property name="operationPath" value="/v17/customers/{customerId}:generateKeywordIdeas"/>
+            <property name="pathParameters" value="customerId,"/>
+        </class>
+        <payloadFactory media-type="json" template-type="freemarker">
+            <format>
+                <![CDATA[{
+                                                                                        <#if (args.arg1)?has_content>
+                                    "geoTargetConstants": "${args.arg1}",                                </#if>
+                                                                                            <#if (args.arg2)?has_content>
+                                    "includeAdultKeywords": "${args.arg2}",                                </#if>
+                                                                                            <#if (args.arg3)?has_content>
+                                    "pageToken": "${args.arg3}",                                </#if>
+                                                                                            <#if (args.arg4)?has_content>
+                                    "pageSize": "${args.arg4}",                                </#if>
+                                                                                            <#if (args.arg5)?has_content>
+                                    "keywordPlanNetwork": "${args.arg5}",                                </#if>
+                                                                                            <#if (args.arg6)?has_content>
+                                    "keywordAnnotation": "${args.arg6}",                                </#if>
+                                                                                            <#if (args.arg7)?has_content>
+                                    "aggregateMetrics": "${args.arg7}",                                </#if>
+                                                                                            <#if (args.arg8)?has_content>
+                                    "historicalMetricsOptions": "${args.arg8}",                                </#if>
+                                                                                            <#if (args.arg9)?has_content>
+                                    "language": "${args.arg9}",                                </#if>
+                                                                                            <#if (args.arg10)?has_content>
+                                    "keywordAndUrlSeed": "${args.arg10}",                                </#if>
+                                                                                            <#if (args.arg11)?has_content>
+                                    "keywordSeed": "${args.arg11}",                                </#if>
+                                                                                            <#if (args.arg12)?has_content>
+                                    "urlSeed": "${args.arg12}",                                </#if>
+                                                                                            <#if (args.arg13)?has_content>
+                                    "siteSeed": "${args.arg13}"                                </#if>
+                                                                                        }]]>
+            </format>
+            <args>
+                <arg evaluator="xml" expression="$func:geoTargetConstants"/>
+                <arg evaluator="xml" expression="$func:includeAdultKeywords"/>
+                <arg evaluator="xml" expression="$func:pageToken"/>
+                <arg evaluator="xml" expression="$func:pageSize"/>
+                <arg evaluator="xml" expression="$func:keywordPlanNetwork"/>
+                <arg evaluator="xml" expression="$func:keywordAnnotation"/>
+                <arg evaluator="xml" expression="$func:aggregateMetrics"/>
+                <arg evaluator="xml" expression="$func:historicalMetricsOptions"/>
+                <arg evaluator="xml" expression="$func:language"/>
+                <arg evaluator="xml" expression="$func:keywordAndUrlSeed"/>
+                <arg evaluator="xml" expression="$func:keywordSeed"/>
+                <arg evaluator="xml" expression="$func:urlSeed"/>
+                <arg evaluator="xml" expression="$func:siteSeed"/>
+            </args>
+        </payloadFactory>
+        <property name="DISABLE_CHUNKING" scope="axis2" type="STRING" value="true"/>
+        <property name="messageType" value="application/json" scope="axis2"/>
+        <property name="ContentType" value="application/json" scope="axis2"/>
+        <header name="Accept" value="application/json" scope="transport" action="set"/>
+        <call>
+            <endpoint>
+                <http method="POST" uri-template="{uri.var.base}{+uri.var.urlPath}{+uri.var.urlQuery}"/>
+            </endpoint>
+        </call>
+        <!-- Remove custom header information -->
+        <header name="request-id" scope="transport" action="remove"/>
+        <header name="x-xss-protection" scope="transport" action="remove"/>
+        <header name="vary" scope="transport" action="remove"/>
+        <header name="alt-svc" scope="transport" action="remove"/>
+        <header name="server" scope="transport" action="remove"/>
+        <header name="access-control-allow-origin" scope="transport" action="remove"/>
+        <header name="access-control-allow-methods" scope="transport" action="remove"/>
+        <header name="x-content-type-options" scope="transport" action="remove"/>
+        <header name="access-control-allow-headers" scope="transport" action="remove"/>
+        <header name="x-frame-options" scope="transport" action="remove"/>
+        <header name="cache-control" scope="transport" action="remove"/>
+    </sequence>
+</template>

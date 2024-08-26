@@ -1,0 +1,102 @@
+{
+  "connectorName": "googleAdNetwork",
+  "operationName": "geoTargetConstants.suggest",
+  "title": "Geo Target Constants Suggest",
+  "help": "<h1>Geo Target Constants Suggest</h1> <b>The geoTargetConstants.suggest operation.</b>",
+  "elements": [
+    {
+      "type": "attributeGroup",
+      "value": {
+        "groupName": "General",
+        "elements": [
+          {
+            "type": "attribute",
+            "value": {
+              "name": "configRef",
+              "displayName": "Connection",
+              "inputType": "connection",
+              "allowedConnectionTypes": [
+                "googleAdNetwork"
+              ],
+              "defaultType": "connection.googleAdNetwork",
+              "defaultValue": "",
+              "required": "true",
+              "helpTip": "Connection to be used"
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Search",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "search",
+                    "displayName": "Search",
+                    "inputType": "searchBox",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "Search for an attribute using the display name"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Request Body",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "locale",
+                    "displayName": "Locale",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "If possible, returned geo targets are translated using this locale. If not, en is used by default. This is also used as a hint for returned geo targets. Type: string"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "countryCode",
+                    "displayName": "Country Code",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "Returned geo targets are restricted to this country code. Type: string"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "locationNames",
+                    "displayName": "Location Names",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "The location names to search by. At most 25 names can be set. Type: object (LocationNames)"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "geoTargets",
+                    "displayName": "Geo Targets",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "The geo target constant resource names to filter by. Type: object (GeoTargets)"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

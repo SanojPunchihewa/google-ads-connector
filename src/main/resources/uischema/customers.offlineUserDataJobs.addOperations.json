@@ -1,0 +1,121 @@
+{
+  "connectorName": "googleAdNetwork",
+  "operationName": "customers.offlineUserDataJobs.addOperations",
+  "title": "Customers Offline User Data Jobs Add Operations",
+  "help": "<h1>Customers Offline User Data Jobs Add Operations</h1> <b>The customers.offlineUserDataJobs.addOperations operation.</b>",
+  "elements": [
+    {
+      "type": "attributeGroup",
+      "value": {
+        "groupName": "General",
+        "elements": [
+          {
+            "type": "attribute",
+            "value": {
+              "name": "configRef",
+              "displayName": "Connection",
+              "inputType": "connection",
+              "allowedConnectionTypes": [
+                "googleAdNetwork"
+              ],
+              "defaultType": "connection.googleAdNetwork",
+              "defaultValue": "",
+              "required": "true",
+              "helpTip": "Connection to be used"
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Search",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "search",
+                    "displayName": "Search",
+                    "inputType": "searchBox",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "Search for an attribute using the display name"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Parameters",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "resourceName",
+                    "displayName": "Resource Name",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "true",
+                    "helpTip": "Required. The resource name of the OfflineUserDataJob."
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Request Body",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "operations",
+                    "displayName": "Operations",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "true",
+                    "helpTip": "Required. The list of operations to be done. Type: object (OfflineUserDataJobOperation)"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "validateOnly",
+                    "displayName": "Validate Only",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "If true, the request is validated but not executed. Only errors are returned, not results. Type: boolean"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "enablePartialFailure",
+                    "displayName": "Enable Partial Failure",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "True to enable partial failure for the offline user data job. Type: boolean"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "enableWarnings",
+                    "displayName": "Enable Warnings",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "True to enable warnings for the offline user data job. When enabled, a warning will not block the OfflineUserDataJobOperation, and will also return warning messages about malformed field values. Type: boolean"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

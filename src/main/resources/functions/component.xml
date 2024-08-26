@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2024, WSO2 LLC. (http://www.wso2.com). All Rights Reserved.
+  ~
+  ~ This software is the property of WSO2 LLC. and its suppliers, if any.
+  ~ Dissemination of any information or reproduction of any material contained
+  ~ herein is strictly forbidden, unless permitted by WSO2 in accordance with
+  ~ the WSO2 Software License available at: https://wso2.com/licenses/eula/3.2
+  ~ For specific language governing the permissions and limitations under
+  ~ this license, please see the license as well as any agreement you’ve
+  ~ entered into with WSO2 governing the purchase of this software and any
+  ~ associated services.
+  -->
+
+<!-- Generated on 23-Fri, 08, 2024 16:11:19+0530 -->
+
+<component name="functions" type="synapse/template">
+    <subComponents>
+        <component name="audienceInsights.listInsightsEligibleDates">
+            <file>audienceInsights.listInsightsEligibleDates.xml</file>
+            <description>This is audienceInsights.listInsightsEligibleDates operation.</description>
+        </component>
+        <component name="customers.AdGroupCriterionCustomizers.mutate">
+            <file>customers.AdGroupCriterionCustomizers.mutate.xml</file>
+            <description>This is customers.AdGroupCriterionCustomizers.mutate operation.</description>
+        </component>
+        <component name="customers.CustomerCustomizers.mutate">
+            <file>customers.CustomerCustomizers.mutate.xml</file>
+            <description>This is customers.CustomerCustomizers.mutate operation.</description>
+        </component>
+        <component name="customers.accountBudgetProposals.mutate">
+            <file>customers.accountBudgetProposals.mutate.xml</file>
+            <description>This is customers.accountBudgetProposals.mutate operation.</description>
+        </component>
+        <component name="customers.accountLinks.create">
+            <file>customers.accountLinks.create.xml</file>
+            <description>This is customers.accountLinks.create operation.</description>
+        </component>
+        <component name="customers.accountLinks.mutate">
+            <file>customers.accountLinks.mutate.xml</file>
+            <description>This is customers.accountLinks.mutate operation.</description>
+        </component>
+        <component name="customers.adGroupAdLabels.mutate">
+            <file>customers.adGroupAdLabels.mutate.xml</file>
+            <description>This is customers.adGroupAdLabels.mutate operation.</description>
+        </component>
+        <component name="customers.adGroupAds.mutate">
+            <file>customers.adGroupAds.mutate.xml</file>
+            <description>This is customers.adGroupAds.mutate operation.</description>
+        </component>
+        <component name="customers.adGroupAds.removeAutomaticallyCreatedAssets">
+            <file>customers.adGroupAds.removeAutomaticallyCreatedAssets.xml</file>
+            <description>This is customers.adGroupAds.removeAutomaticallyCreatedAssets operation.</description>
+        </component>
+        <component name="customers.adGroupAssetSets.mutate">
+            <file>customers.adGroupAssetSets.mutate.xml</file>
+            <description>This is customers.adGroupAssetSets.mutate operation.</description>
+        </component>
+        <component name="customers.adGroupAssets.mutate">
+            <file>customers.adGroupAssets.mutate.xml</file>
+            <description>This is customers.adGroupAssets.mutate operation.</description>
+        </component>
+        <component name="customers.adGroupBidModifiers.mutate">
+            <file>customers.adGroupBidModifiers.mutate.xml</file>
+            <description>This is customers.adGroupBidModifiers.mutate operation.</description>
+        </component>
+        <component name="customers.adGroupCriteria.mutate">
+            <file>customers.adGroupCriteria.mutate.xml</file>
+            <description>This is customers.adGroupCriteria.mutate operation.</description>
+        </component>
+        <component name="customers.adGroupCriterionLabels.mutate">
+            <file>customers.adGroupCriterionLabels.mutate.xml</file>
+            <description>This is customers.adGroupCriterionLabels.mutate operation.</description>
+        </component>
+        <component name="customers.adGroupCustomizers.mutate">
+            <file>customers.adGroupCustomizers.mutate.xml</file>
+            <description>This is customers.adGroupCustomizers.mutate operation.</description>
+        </component>
+        <component name="customers.adGroupExtensionSettings.mutate">
+            <file>customers.adGroupExtensionSettings.mutate.xml</file>
+            <description>This is customers.adGroupExtensionSettings.mutate operation.</description>
+        </component>
+        <component name="customers.adGroupFeeds.mutate">
+            <file>customers.adGroupFeeds.mutate.xml</file>
+            <description>This is customers.adGroupFeeds.mutate operation.</description>
+        </component>
+        <component name="customers.adGroupLabels.mutate">
+            <file>customers.adGroupLabels.mutate.xml</file>
+            <description>This is customers.adGroupLabels.mutate operation.</description>
+        </component>
+        <component name="customers.adGroups.mutate">
+            <file>customers.adGroups.mutate.xml</file>
+            <description>This is customers.adGroups.mutate operation.</description>
+        </component>
+        <component name="customers.adParameters.mutate">
+            <file>customers.adParameters.mutate.xml</file>
+            <description>This is customers.adParameters.mutate operation.</description>
+        </component>
+        <component name="customers.ads.mutate">
+            <file>customers.ads.mutate.xml</file>
+            <description>This is customers.ads.mutate operation.</description>
+        </component>
+        <component name="customers.assetGroupAssets.mutate">
+            <file>customers.assetGroupAssets.mutate.xml</file>
+            <description>This is customers.assetGroupAssets.mutate operation.</description>
+        </component>
+        <component name="customers.assetGroupListingGroupFilters.mutate">
+            <file>customers.assetGroupListingGroupFilters.mutate.xml</file>
+            <description>This is customers.assetGroupListingGroupFilters.mutate operation.</description>
+        </component>
+        <component name="customers.assetGroupSignals.mutate">
+            <file>customers.assetGroupSignals.mutate.xml</file>
+            <description>This is customers.assetGroupSignals.mutate operation.</description>
+        </component>
+        <component name="customers.assetGroups.mutate">
+            <file>customers.assetGroups.mutate.xml</file>
+            <description>This is customers.assetGroups.mutate operation.</description>
+        </component>
+        <component name="customers.assetSetAssets.mutate">
+            <file>customers.assetSetAssets.mutate.xml</file>
+            <description>This is customers.assetSetAssets.mutate operation.</description>
+        </component>
+        <component name="customers.assetSets.mutate">
+            <file>customers.assetSets.mutate.xml</file>
+            <description>This is customers.assetSets.mutate operation.</description>
+        </component>
+        <component name="customers.assets.mutate">
+            <file>customers.assets.mutate.xml</file>
+            <description>This is customers.assets.mutate operation.</description>
+        </component>
+        <component name="customers.audiences.mutate">
+            <file>customers.audiences.mutate.xml</file>
+            <description>This is customers.audiences.mutate operation.</description>
+        </component>
+        <component name="customers.batchJobs.addOperations">
+            <file>customers.batchJobs.addOperations.xml</file>
+            <description>This is customers.batchJobs.addOperations operation.</description>
+        </component>
+        <component name="customers.batchJobs.listResults">
+            <file>customers.batchJobs.listResults.xml</file>
+            <description>This is customers.batchJobs.listResults operation.</description>
+        </component>
+        <component name="customers.batchJobs.mutate">
+            <file>customers.batchJobs.mutate.xml</file>
+            <description>This is customers.batchJobs.mutate operation.</description>
+        </component>
+        <component name="customers.batchJobs.run">
+            <file>customers.batchJobs.run.xml</file>
+            <description>This is customers.batchJobs.run operation.</description>
+        </component>
+        <component name="customers.biddingDataExclusions.mutate">
+            <file>customers.biddingDataExclusions.mutate.xml</file>
+            <description>This is customers.biddingDataExclusions.mutate operation.</description>
+        </component>
+        <component name="customers.biddingSeasonalityAdjustments.mutate">
+            <file>customers.biddingSeasonalityAdjustments.mutate.xml</file>
+            <description>This is customers.biddingSeasonalityAdjustments.mutate operation.</description>
+        </component>
+        <component name="customers.biddingStrategies.mutate">
+            <file>customers.biddingStrategies.mutate.xml</file>
+            <description>This is customers.biddingStrategies.mutate operation.</description>
+        </component>
+        <component name="customers.billingSetups.mutate">
+            <file>customers.billingSetups.mutate.xml</file>
+            <description>This is customers.billingSetups.mutate operation.</description>
+        </component>
+        <component name="customers.campaignAssetSets.mutate">
+            <file>customers.campaignAssetSets.mutate.xml</file>
+            <description>This is customers.campaignAssetSets.mutate operation.</description>
+        </component>
+        <component name="customers.campaignAssets.mutate">
+            <file>customers.campaignAssets.mutate.xml</file>
+            <description>This is customers.campaignAssets.mutate operation.</description>
+        </component>
+        <component name="customers.campaignBidModifiers.mutate">
+            <file>customers.campaignBidModifiers.mutate.xml</file>
+            <description>This is customers.campaignBidModifiers.mutate operation.</description>
+        </component>
+        <component name="customers.campaignBudgets.mutate">
+            <file>customers.campaignBudgets.mutate.xml</file>
+            <description>This is customers.campaignBudgets.mutate operation.</description>
+        </component>
+        <component name="customers.campaignConversionGoals.mutate">
+            <file>customers.campaignConversionGoals.mutate.xml</file>
+            <description>This is customers.campaignConversionGoals.mutate operation.</description>
+        </component>
+        <component name="customers.campaignCriteria.mutate">
+            <file>customers.campaignCriteria.mutate.xml</file>
+            <description>This is customers.campaignCriteria.mutate operation.</description>
+        </component>
+        <component name="customers.campaignCustomizers.mutate">
+            <file>customers.campaignCustomizers.mutate.xml</file>
+            <description>This is customers.campaignCustomizers.mutate operation.</description>
+        </component>
+        <component name="customers.campaignDrafts.listAsyncErrors">
+            <file>customers.campaignDrafts.listAsyncErrors.xml</file>
+            <description>This is customers.campaignDrafts.listAsyncErrors operation.</description>
+        </component>
+        <component name="customers.campaignDrafts.mutate">
+            <file>customers.campaignDrafts.mutate.xml</file>
+            <description>This is customers.campaignDrafts.mutate operation.</description>
+        </component>
+        <component name="customers.campaignDrafts.promote">
+            <file>customers.campaignDrafts.promote.xml</file>
+            <description>This is customers.campaignDrafts.promote operation.</description>
+        </component>
+        <component name="customers.campaignExtensionSettings.mutate">
+            <file>customers.campaignExtensionSettings.mutate.xml</file>
+            <description>This is customers.campaignExtensionSettings.mutate operation.</description>
+        </component>
+        <component name="customers.campaignFeeds.mutate">
+            <file>customers.campaignFeeds.mutate.xml</file>
+            <description>This is customers.campaignFeeds.mutate operation.</description>
+        </component>
+        <component name="customers.campaignGroups.mutate">
+            <file>customers.campaignGroups.mutate.xml</file>
+            <description>This is customers.campaignGroups.mutate operation.</description>
+        </component>
+        <component name="customers.campaignLabels.mutate">
+            <file>customers.campaignLabels.mutate.xml</file>
+            <description>This is customers.campaignLabels.mutate operation.</description>
+        </component>
+        <component name="customers.campaignLifecycleGoal.configureCampaignLifecycleGoals">
+            <file>customers.campaignLifecycleGoal.configureCampaignLifecycleGoals.xml</file>
+            <description>This is customers.campaignLifecycleGoal.configureCampaignLifecycleGoals operation.
+            </description>
+        </component>
+        <component name="customers.campaignSharedSets.mutate">
+            <file>customers.campaignSharedSets.mutate.xml</file>
+            <description>This is customers.campaignSharedSets.mutate operation.</description>
+        </component>
+        <component name="customers.campaigns.mutate">
+            <file>customers.campaigns.mutate.xml</file>
+            <description>This is customers.campaigns.mutate operation.</description>
+        </component>
+        <component name="customers.conversionActions.mutate">
+            <file>customers.conversionActions.mutate.xml</file>
+            <description>This is customers.conversionActions.mutate operation.</description>
+        </component>
+        <component name="customers.conversionCustomVariables.mutate">
+            <file>customers.conversionCustomVariables.mutate.xml</file>
+            <description>This is customers.conversionCustomVariables.mutate operation.</description>
+        </component>
+        <component name="customers.conversionGoalCampaignConfigs.mutate">
+            <file>customers.conversionGoalCampaignConfigs.mutate.xml</file>
+            <description>This is customers.conversionGoalCampaignConfigs.mutate operation.</description>
+        </component>
+        <component name="customers.conversionValueRuleSets.mutate">
+            <file>customers.conversionValueRuleSets.mutate.xml</file>
+            <description>This is customers.conversionValueRuleSets.mutate operation.</description>
+        </component>
+        <component name="customers.conversionValueRules.mutate">
+            <file>customers.conversionValueRules.mutate.xml</file>
+            <description>This is customers.conversionValueRules.mutate operation.</description>
+        </component>
+        <component name="customers.createCustomerClient">
+            <file>customers.createCustomerClient.xml</file>
+            <description>This is customers.createCustomerClient operation.</description>
+        </component>
+        <component name="customers.customAudiences.mutate">
+            <file>customers.customAudiences.mutate.xml</file>
+            <description>This is customers.customAudiences.mutate operation.</description>
+        </component>
+        <component name="customers.customConversionGoals.mutate">
+            <file>customers.customConversionGoals.mutate.xml</file>
+            <description>This is customers.customConversionGoals.mutate operation.</description>
+        </component>
+        <component name="customers.customInterests.mutate">
+            <file>customers.customInterests.mutate.xml</file>
+            <description>This is customers.customInterests.mutate operation.</description>
+        </component>
+        <component name="customers.customerAssetSets.mutate">
+            <file>customers.customerAssetSets.mutate.xml</file>
+            <description>This is customers.customerAssetSets.mutate operation.</description>
+        </component>
+        <component name="customers.customerAssets.mutate">
+            <file>customers.customerAssets.mutate.xml</file>
+            <description>This is customers.customerAssets.mutate operation.</description>
+        </component>
+        <component name="customers.customerClientLinks.mutate">
+            <file>customers.customerClientLinks.mutate.xml</file>
+            <description>This is customers.customerClientLinks.mutate operation.</description>
+        </component>
+        <component name="customers.customerConversionGoals.mutate">
+            <file>customers.customerConversionGoals.mutate.xml</file>
+            <description>This is customers.customerConversionGoals.mutate operation.</description>
+        </component>
+        <component name="customers.customerExtensionSettings.mutate">
+            <file>customers.customerExtensionSettings.mutate.xml</file>
+            <description>This is customers.customerExtensionSettings.mutate operation.</description>
+        </component>
+        <component name="customers.customerFeeds.mutate">
+            <file>customers.customerFeeds.mutate.xml</file>
+            <description>This is customers.customerFeeds.mutate operation.</description>
+        </component>
+        <component name="customers.customerLabels.mutate">
+            <file>customers.customerLabels.mutate.xml</file>
+            <description>This is customers.customerLabels.mutate operation.</description>
+        </component>
+        <component name="customers.customerLifecycleGoal.configureCustomerLifecycleGoals">
+            <file>customers.customerLifecycleGoal.configureCustomerLifecycleGoals.xml</file>
+            <description>This is customers.customerLifecycleGoal.configureCustomerLifecycleGoals operation.
+            </description>
+        </component>
+        <component name="customers.customerManagerLinks.moveManagerLink">
+            <file>customers.customerManagerLinks.moveManagerLink.xml</file>
+            <description>This is customers.customerManagerLinks.moveManagerLink operation.</description>
+        </component>
+        <component name="customers.customerManagerLinks.mutate">
+            <file>customers.customerManagerLinks.mutate.xml</file>
+            <description>This is customers.customerManagerLinks.mutate operation.</description>
+        </component>
+        <component name="customers.customerNegativeCriteria.mutate">
+            <file>customers.customerNegativeCriteria.mutate.xml</file>
+            <description>This is customers.customerNegativeCriteria.mutate operation.</description>
+        </component>
+        <component name="customers.customerSkAdNetworkConversionValueSchemas.mutate">
+            <file>customers.customerSkAdNetworkConversionValueSchemas.mutate.xml</file>
+            <description>This is customers.customerSkAdNetworkConversionValueSchemas.mutate operation.</description>
+        </component>
+        <component name="customers.customerUserAccessInvitations.mutate">
+            <file>customers.customerUserAccessInvitations.mutate.xml</file>
+            <description>This is customers.customerUserAccessInvitations.mutate operation.</description>
+        </component>
+        <component name="customers.customerUserAccesses.mutate">
+            <file>customers.customerUserAccesses.mutate.xml</file>
+            <description>This is customers.customerUserAccesses.mutate operation.</description>
+        </component>
+        <component name="customers.customizerAttributes.mutate">
+            <file>customers.customizerAttributes.mutate.xml</file>
+            <description>This is customers.customizerAttributes.mutate operation.</description>
+        </component>
+        <component name="customers.experimentArms.mutate">
+            <file>customers.experimentArms.mutate.xml</file>
+            <description>This is customers.experimentArms.mutate operation.</description>
+        </component>
+        <component name="customers.experiments.endExperiment">
+            <file>customers.experiments.endExperiment.xml</file>
+            <description>This is customers.experiments.endExperiment operation.</description>
+        </component>
+        <component name="customers.experiments.graduateExperiment">
+            <file>customers.experiments.graduateExperiment.xml</file>
+            <description>This is customers.experiments.graduateExperiment operation.</description>
+        </component>
+        <component name="customers.experiments.listExperimentAsyncErrors">
+            <file>customers.experiments.listExperimentAsyncErrors.xml</file>
+            <description>This is customers.experiments.listExperimentAsyncErrors operation.</description>
+        </component>
+        <component name="customers.experiments.mutate">
+            <file>customers.experiments.mutate.xml</file>
+            <description>This is customers.experiments.mutate operation.</description>
+        </component>
+        <component name="customers.experiments.promoteExperiment">
+            <file>customers.experiments.promoteExperiment.xml</file>
+            <description>This is customers.experiments.promoteExperiment operation.</description>
+        </component>
+        <component name="customers.experiments.scheduleExperiment">
+            <file>customers.experiments.scheduleExperiment.xml</file>
+            <description>This is customers.experiments.scheduleExperiment operation.</description>
+        </component>
+        <component name="customers.extensionFeedItems.mutate">
+            <file>customers.extensionFeedItems.mutate.xml</file>
+            <description>This is customers.extensionFeedItems.mutate operation.</description>
+        </component>
+        <component name="customers.feedItemSetLinks.mutate">
+            <file>customers.feedItemSetLinks.mutate.xml</file>
+            <description>This is customers.feedItemSetLinks.mutate operation.</description>
+        </component>
+        <component name="customers.feedItemSets.mutate">
+            <file>customers.feedItemSets.mutate.xml</file>
+            <description>This is customers.feedItemSets.mutate operation.</description>
+        </component>
+        <component name="customers.feedItemTargets.mutate">
+            <file>customers.feedItemTargets.mutate.xml</file>
+            <description>This is customers.feedItemTargets.mutate operation.</description>
+        </component>
+        <component name="customers.feedItems.mutate">
+            <file>customers.feedItems.mutate.xml</file>
+            <description>This is customers.feedItems.mutate operation.</description>
+        </component>
+        <component name="customers.feedMappings.mutate">
+            <file>customers.feedMappings.mutate.xml</file>
+            <description>This is customers.feedMappings.mutate operation.</description>
+        </component>
+        <component name="customers.feeds.mutate">
+            <file>customers.feeds.mutate.xml</file>
+            <description>This is customers.feeds.mutate operation.</description>
+        </component>
+        <component name="customers.generateAdGroupThemes">
+            <file>customers.generateAdGroupThemes.xml</file>
+            <description>This is customers.generateAdGroupThemes operation.</description>
+        </component>
+        <component name="customers.generateAudienceCompositionInsights">
+            <file>customers.generateAudienceCompositionInsights.xml</file>
+            <description>This is customers.generateAudienceCompositionInsights operation.</description>
+        </component>
+        <component name="customers.generateAudienceOverlapInsights">
+            <file>customers.generateAudienceOverlapInsights.xml</file>
+            <description>This is customers.generateAudienceOverlapInsights operation.</description>
+        </component>
+        <component name="customers.generateInsightsFinderReport">
+            <file>customers.generateInsightsFinderReport.xml</file>
+            <description>This is customers.generateInsightsFinderReport operation.</description>
+        </component>
+        <component name="customers.generateKeywordForecastMetrics">
+            <file>customers.generateKeywordForecastMetrics.xml</file>
+            <description>This is customers.generateKeywordForecastMetrics operation.</description>
+        </component>
+        <component name="customers.generateKeywordHistoricalMetrics">
+            <file>customers.generateKeywordHistoricalMetrics.xml</file>
+            <description>This is customers.generateKeywordHistoricalMetrics operation.</description>
+        </component>
+        <component name="customers.generateKeywordIdeas">
+            <file>customers.generateKeywordIdeas.xml</file>
+            <description>This is customers.generateKeywordIdeas operation.</description>
+        </component>
+        <component name="customers.generateReachForecast">
+            <file>customers.generateReachForecast.xml</file>
+            <description>This is customers.generateReachForecast operation.</description>
+        </component>
+        <component name="customers.generateShareablePreviews">
+            <file>customers.generateShareablePreviews.xml</file>
+            <description>This is customers.generateShareablePreviews operation.</description>
+        </component>
+        <component name="customers.generateSuggestedTargetingInsights">
+            <file>customers.generateSuggestedTargetingInsights.xml</file>
+            <description>This is customers.generateSuggestedTargetingInsights operation.</description>
+        </component>
+        <component name="customers.getIdentityVerification">
+            <file>customers.getIdentityVerification.xml</file>
+            <description>This is customers.getIdentityVerification operation.</description>
+        </component>
+        <component name="customers.googleAds.mutate">
+            <file>customers.googleAds.mutate.xml</file>
+            <description>This is customers.googleAds.mutate operation.</description>
+        </component>
+        <component name="customers.googleAds.search">
+            <file>customers.googleAds.search.xml</file>
+            <description>This is customers.googleAds.search operation.</description>
+        </component>
+        <component name="customers.googleAds.searchStream">
+            <file>customers.googleAds.searchStream.xml</file>
+            <description>This is customers.googleAds.searchStream operation.</description>
+        </component>
+        <component name="customers.invoices.list">
+            <file>customers.invoices.list.xml</file>
+            <description>This is customers.invoices.list operation.</description>
+        </component>
+        <component name="customers.keywordPlanAdGroupKeywords.mutate">
+            <file>customers.keywordPlanAdGroupKeywords.mutate.xml</file>
+            <description>This is customers.keywordPlanAdGroupKeywords.mutate operation.</description>
+        </component>
+        <component name="customers.keywordPlanAdGroups.mutate">
+            <file>customers.keywordPlanAdGroups.mutate.xml</file>
+            <description>This is customers.keywordPlanAdGroups.mutate operation.</description>
+        </component>
+        <component name="customers.keywordPlanCampaignKeywords.mutate">
+            <file>customers.keywordPlanCampaignKeywords.mutate.xml</file>
+            <description>This is customers.keywordPlanCampaignKeywords.mutate operation.</description>
+        </component>
+        <component name="customers.keywordPlanCampaigns.mutate">
+            <file>customers.keywordPlanCampaigns.mutate.xml</file>
+            <description>This is customers.keywordPlanCampaigns.mutate operation.</description>
+        </component>
+        <component name="customers.keywordPlans.mutate">
+            <file>customers.keywordPlans.mutate.xml</file>
+            <description>This is customers.keywordPlans.mutate operation.</description>
+        </component>
+        <component name="customers.labels.mutate">
+            <file>customers.labels.mutate.xml</file>
+            <description>This is customers.labels.mutate operation.</description>
+        </component>
+        <component name="customers.listAccessibleCustomers">
+            <file>customers.listAccessibleCustomers.xml</file>
+            <description>This is customers.listAccessibleCustomers operation.</description>
+        </component>
+        <component name="customers.localServices.appendLeadConversation">
+            <file>customers.localServices.appendLeadConversation.xml</file>
+            <description>This is customers.localServices.appendLeadConversation operation.</description>
+        </component>
+        <component name="customers.mutate">
+            <file>customers.mutate.xml</file>
+            <description>This is customers.mutate operation.</description>
+        </component>
+        <component name="customers.offlineUserDataJobs.addOperations">
+            <file>customers.offlineUserDataJobs.addOperations.xml</file>
+            <description>This is customers.offlineUserDataJobs.addOperations operation.</description>
+        </component>
+        <component name="customers.offlineUserDataJobs.create">
+            <file>customers.offlineUserDataJobs.create.xml</file>
+            <description>This is customers.offlineUserDataJobs.create operation.</description>
+        </component>
+        <component name="customers.offlineUserDataJobs.run">
+            <file>customers.offlineUserDataJobs.run.xml</file>
+            <description>This is customers.offlineUserDataJobs.run operation.</description>
+        </component>
+        <component name="customers.operations.cancel">
+            <file>customers.operations.cancel.xml</file>
+            <description>This is customers.operations.cancel operation.</description>
+        </component>
+        <component name="customers.operations.get">
+            <file>customers.operations.get.xml</file>
+            <description>This is customers.operations.get operation.</description>
+        </component>
+        <component name="customers.operations.list">
+            <file>customers.operations.list.xml</file>
+            <description>This is customers.operations.list operation.</description>
+        </component>
+        <component name="customers.operations.wait">
+            <file>customers.operations.wait.xml</file>
+            <description>This is customers.operations.wait operation.</description>
+        </component>
+        <component name="customers.paymentsAccounts.list">
+            <file>customers.paymentsAccounts.list.xml</file>
+            <description>This is customers.paymentsAccounts.list operation.</description>
+        </component>
+        <component name="customers.productLinkInvitations.create">
+            <file>customers.productLinkInvitations.create.xml</file>
+            <description>This is customers.productLinkInvitations.create operation.</description>
+        </component>
+        <component name="customers.productLinkInvitations.remove">
+            <file>customers.productLinkInvitations.remove.xml</file>
+            <description>This is customers.productLinkInvitations.remove operation.</description>
+        </component>
+        <component name="customers.productLinkInvitations.update">
+            <file>customers.productLinkInvitations.update.xml</file>
+            <description>This is customers.productLinkInvitations.update operation.</description>
+        </component>
+        <component name="customers.productLinks.create">
+            <file>customers.productLinks.create.xml</file>
+            <description>This is customers.productLinks.create operation.</description>
+        </component>
+        <component name="customers.productLinks.remove">
+            <file>customers.productLinks.remove.xml</file>
+            <description>This is customers.productLinks.remove operation.</description>
+        </component>
+        <component name="customers.recommendationSubscriptions.mutateRecommendationSubscription">
+            <file>customers.recommendationSubscriptions.mutateRecommendationSubscription.xml</file>
+            <description>This is customers.recommendationSubscriptions.mutateRecommendationSubscription operation.
+            </description>
+        </component>
+        <component name="customers.recommendations.apply">
+            <file>customers.recommendations.apply.xml</file>
+            <description>This is customers.recommendations.apply operation.</description>
+        </component>
+        <component name="customers.recommendations.dismiss">
+            <file>customers.recommendations.dismiss.xml</file>
+            <description>This is customers.recommendations.dismiss operation.</description>
+        </component>
+        <component name="customers.recommendations.generate">
+            <file>customers.recommendations.generate.xml</file>
+            <description>This is customers.recommendations.generate operation.</description>
+        </component>
+        <component name="customers.remarketingActions.mutate">
+            <file>customers.remarketingActions.mutate.xml</file>
+            <description>This is customers.remarketingActions.mutate operation.</description>
+        </component>
+        <component name="customers.searchAudienceInsightsAttributes">
+            <file>customers.searchAudienceInsightsAttributes.xml</file>
+            <description>This is customers.searchAudienceInsightsAttributes operation.</description>
+        </component>
+        <component name="customers.sharedCriteria.mutate">
+            <file>customers.sharedCriteria.mutate.xml</file>
+            <description>This is customers.sharedCriteria.mutate operation.</description>
+        </component>
+        <component name="customers.sharedSets.mutate">
+            <file>customers.sharedSets.mutate.xml</file>
+            <description>This is customers.sharedSets.mutate operation.</description>
+        </component>
+        <component name="customers.smartCampaignSettings.getSmartCampaignStatus">
+            <file>customers.smartCampaignSettings.getSmartCampaignStatus.xml</file>
+            <description>This is customers.smartCampaignSettings.getSmartCampaignStatus operation.</description>
+        </component>
+        <component name="customers.smartCampaignSettings.mutate">
+            <file>customers.smartCampaignSettings.mutate.xml</file>
+            <description>This is customers.smartCampaignSettings.mutate operation.</description>
+        </component>
+        <component name="customers.startIdentityVerification">
+            <file>customers.startIdentityVerification.xml</file>
+            <description>This is customers.startIdentityVerification operation.</description>
+        </component>
+        <component name="customers.suggestBrands">
+            <file>customers.suggestBrands.xml</file>
+            <description>This is customers.suggestBrands operation.</description>
+        </component>
+        <component name="customers.suggestKeywordThemes">
+            <file>customers.suggestKeywordThemes.xml</file>
+            <description>This is customers.suggestKeywordThemes operation.</description>
+        </component>
+        <component name="customers.suggestSmartCampaignAd">
+            <file>customers.suggestSmartCampaignAd.xml</file>
+            <description>This is customers.suggestSmartCampaignAd operation.</description>
+        </component>
+        <component name="customers.suggestSmartCampaignBudgetOptions">
+            <file>customers.suggestSmartCampaignBudgetOptions.xml</file>
+            <description>This is customers.suggestSmartCampaignBudgetOptions operation.</description>
+        </component>
+        <component name="customers.suggestTravelAssets">
+            <file>customers.suggestTravelAssets.xml</file>
+            <description>This is customers.suggestTravelAssets operation.</description>
+        </component>
+        <component name="customers.thirdPartyAppAnalyticsLinks.regenerateShareableLinkId">
+            <file>customers.thirdPartyAppAnalyticsLinks.regenerateShareableLinkId.xml</file>
+            <description>This is customers.thirdPartyAppAnalyticsLinks.regenerateShareableLinkId operation.
+            </description>
+        </component>
+        <component name="customers.uploadCallConversions">
+            <file>customers.uploadCallConversions.xml</file>
+            <description>This is customers.uploadCallConversions operation.</description>
+        </component>
+        <component name="customers.uploadClickConversions">
+            <file>customers.uploadClickConversions.xml</file>
+            <description>This is customers.uploadClickConversions operation.</description>
+        </component>
+        <component name="customers.uploadConversionAdjustments">
+            <file>customers.uploadConversionAdjustments.xml</file>
+            <description>This is customers.uploadConversionAdjustments operation.</description>
+        </component>
+        <component name="customers.uploadUserData">
+            <file>customers.uploadUserData.xml</file>
+            <description>This is customers.uploadUserData operation.</description>
+        </component>
+        <component name="customers.userListCustomerTypes.mutate">
+            <file>customers.userListCustomerTypes.mutate.xml</file>
+            <description>This is customers.userListCustomerTypes.mutate operation.</description>
+        </component>
+        <component name="customers.userLists.mutate">
+            <file>customers.userLists.mutate.xml</file>
+            <description>This is customers.userLists.mutate operation.</description>
+        </component>
+        <component name="geoTargetConstants.suggest">
+            <file>geoTargetConstants.suggest.xml</file>
+            <description>This is geoTargetConstants.suggest operation.</description>
+        </component>
+        <component name="googleAdsFields.get">
+            <file>googleAdsFields.get.xml</file>
+            <description>This is googleAdsFields.get operation.</description>
+        </component>
+        <component name="googleAdsFields.search">
+            <file>googleAdsFields.search.xml</file>
+            <description>This is googleAdsFields.search operation.</description>
+        </component>
+        <component name="keywordThemeConstants.suggest">
+            <file>keywordThemeConstants.suggest.xml</file>
+            <description>This is keywordThemeConstants.suggest operation.</description>
+        </component>
+        <component name="listPlannableLocations">
+            <file>listPlannableLocations.xml</file>
+            <description>This is listPlannableLocations operation.</description>
+        </component>
+        <component name="listPlannableProducts">
+            <file>listPlannableProducts.xml</file>
+            <description>This is listPlannableProducts operation.</description>
+        </component>
+    </subComponents>
+</component>

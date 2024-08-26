@@ -1,0 +1,91 @@
+{
+  "connectorName": "googleAdNetwork",
+  "operationName": "keywordThemeConstants.suggest",
+  "title": "Keyword Theme Constants Suggest",
+  "help": "<h1>Keyword Theme Constants Suggest</h1> <b>The keywordThemeConstants.suggest operation.</b>",
+  "elements": [
+    {
+      "type": "attributeGroup",
+      "value": {
+        "groupName": "General",
+        "elements": [
+          {
+            "type": "attribute",
+            "value": {
+              "name": "configRef",
+              "displayName": "Connection",
+              "inputType": "connection",
+              "allowedConnectionTypes": [
+                "googleAdNetwork"
+              ],
+              "defaultType": "connection.googleAdNetwork",
+              "defaultValue": "",
+              "required": "true",
+              "helpTip": "Connection to be used"
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Search",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "search",
+                    "displayName": "Search",
+                    "inputType": "searchBox",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "Search for an attribute using the display name"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Request Body",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "queryText",
+                    "displayName": "Query Text",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "The query text of a keyword theme that will be used to map to similar keyword themes. For example, \"plumber\" or \"roofer\". Type: string"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "countryCode",
+                    "displayName": "Country Code",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "Upper-case, two-letter country code as defined by ISO-3166. This for refining the scope of the query, default to 'US' if not set. Type: string"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "languageCode",
+                    "displayName": "Language Code",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "The two letter language code for get corresponding keyword theme for refining the scope of the query, default to 'en' if not set. Type: string"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

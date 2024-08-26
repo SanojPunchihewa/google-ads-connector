@@ -1,0 +1,154 @@
+{
+  "connectorName": "googleAdNetwork",
+  "operationName": "customers.generateKeywordHistoricalMetrics",
+  "title": "Customers Generate Keyword Historical Metrics",
+  "help": "<h1>Customers Generate Keyword Historical Metrics</h1> <b>The customers.generateKeywordHistoricalMetrics operation.</b>",
+  "elements": [
+    {
+      "type": "attributeGroup",
+      "value": {
+        "groupName": "General",
+        "elements": [
+          {
+            "type": "attribute",
+            "value": {
+              "name": "configRef",
+              "displayName": "Connection",
+              "inputType": "connection",
+              "allowedConnectionTypes": [
+                "googleAdNetwork"
+              ],
+              "defaultType": "connection.googleAdNetwork",
+              "defaultValue": "",
+              "required": "true",
+              "helpTip": "Connection to be used"
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Search",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "search",
+                    "displayName": "Search",
+                    "inputType": "searchBox",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "Search for an attribute using the display name"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Parameters",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "customerId",
+                    "displayName": "Customer Id",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "The ID of the customer with the recommendation."
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Request Body",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "keywords",
+                    "displayName": "Keywords",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "A list of keywords to get historical metrics. Not all inputs will be returned as a result of near-exact deduplication. For example, if stats for \"car\" and \"cars\" are requested, only \"car\" will be returned. A maximum of 10,000 keywords can be used. Type: string"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "includeAdultKeywords",
+                    "displayName": "Include Adult Keywords",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "If true, adult keywords will be included in response. The default value is false. Type: boolean"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "geoTargetConstants",
+                    "displayName": "Geo Target Constants",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "The resource names of the location to target. Maximum is 10. An empty list MAY be used to specify all targeting geos. Type: string"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "keywordPlanNetwork",
+                    "displayName": "Keyword Plan Network",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "Targeting network. If not set, Google Search And Partners Network will be used. Type: enum (KeywordPlanNetwork)"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "aggregateMetrics",
+                    "displayName": "Aggregate Metrics",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "The aggregate fields to include in response. Type: object (KeywordPlanAggregateMetrics)"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "historicalMetricsOptions",
+                    "displayName": "Historical Metrics Options",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "The options for historical metrics data. Type: object (HistoricalMetricsOptions)"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "language",
+                    "displayName": "Language",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "The resource name of the language to target. Each keyword belongs to some set of languages; a keyword is included if language is one of its languages. If not set, all keywords will be included. Type: string"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2024, WSO2 LLC. (http://www.wso2.com). All Rights Reserved.
+  ~
+  ~ This software is the property of WSO2 LLC. and its suppliers, if any.
+  ~ Dissemination of any information or reproduction of any material contained
+  ~ herein is strictly forbidden, unless permitted by WSO2 in accordance with
+  ~ the WSO2 Software License available at: https://wso2.com/licenses/eula/3.2
+  ~ For specific language governing the permissions and limitations under
+  ~ this license, please see the license as well as any agreement you’ve
+  ~ entered into with WSO2 governing the purchase of this software and any
+  ~ associated services.
+  -->
+
+<!-- Generated on 23-Fri, 08, 2024 16:11:19+0530 -->
+
+<template xmlns="http://ws.apache.org/ns/synapse" name="customers.generateKeywordForecastMetrics">
+    <!-- Path Parameter List -->
+    <parameter name="customerId" description="The ID of the customer."/>
+    <!-- Request Body Parameter List -->
+    <parameter name="forecastPeriod"
+               description="The date range for the forecast. The start date must be in the future and end date must be within 1 year from today. The reference timezone used is the one of the Google Ads account belonging to the customer. If not set, a default date range from next Sunday to the following Saturday will be used. Type: object (DateRange)"/>
+    <parameter name="campaign"
+               description="Required. The campaign used in the forecast. Type: object (CampaignToForecast)"/>
+    <parameter name="currencyCode"
+               description="The currency used for exchange rate conversion. By default, the account currency of the customer is used. Set this field only if the currency is different from the account currency. The list of valid currency codes can be found athttps://developers.google.com/google-ads/api/data/codes-formats#currency-codes. Type: string"/>
+    <sequence>
+        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+            <property name="operationPath" value="/v17/customers/{customerId}:generateKeywordForecastMetrics"/>
+            <property name="pathParameters" value="customerId,"/>
+        </class>
+        <payloadFactory media-type="json" template-type="freemarker">
+            <format>
+                <![CDATA[{
+                                                                                        <#if (args.arg1)?has_content>
+                                    "forecastPeriod": "${args.arg1}",                                </#if>
+                                                                                            <#if (args.arg2)?has_content>
+                                    "campaign": "${args.arg2}",                                </#if>
+                                                                                            <#if (args.arg3)?has_content>
+                                    "currencyCode": "${args.arg3}"                                </#if>
+                                                                                        }]]>
+            </format>
+            <args>
+                <arg evaluator="xml" expression="$func:forecastPeriod"/>
+                <arg evaluator="xml" expression="$func:campaign"/>
+                <arg evaluator="xml" expression="$func:currencyCode"/>
+            </args>
+        </payloadFactory>
+        <property name="DISABLE_CHUNKING" scope="axis2" type="STRING" value="true"/>
+        <property name="messageType" value="application/json" scope="axis2"/>
+        <property name="ContentType" value="application/json" scope="axis2"/>
+        <header name="Accept" value="application/json" scope="transport" action="set"/>
+        <call>
+            <endpoint>
+                <http method="POST" uri-template="{uri.var.base}{+uri.var.urlPath}{+uri.var.urlQuery}"/>
+            </endpoint>
+        </call>
+        <!-- Remove custom header information -->
+        <header name="request-id" scope="transport" action="remove"/>
+        <header name="x-xss-protection" scope="transport" action="remove"/>
+        <header name="vary" scope="transport" action="remove"/>
+        <header name="alt-svc" scope="transport" action="remove"/>
+        <header name="server" scope="transport" action="remove"/>
+        <header name="access-control-allow-origin" scope="transport" action="remove"/>
+        <header name="access-control-allow-methods" scope="transport" action="remove"/>
+        <header name="x-content-type-options" scope="transport" action="remove"/>
+        <header name="access-control-allow-headers" scope="transport" action="remove"/>
+        <header name="x-frame-options" scope="transport" action="remove"/>
+        <header name="cache-control" scope="transport" action="remove"/>
+    </sequence>
+</template>
