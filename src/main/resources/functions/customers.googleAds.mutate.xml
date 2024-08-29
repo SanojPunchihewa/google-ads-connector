@@ -27,7 +27,7 @@
     <parameter name="responseContentType"
                description="The response content type setting. Determines whether the mutable resource or just the resource name should be returned post mutation. The mutable resource will only be returned if the resource has the appropriate response field. For example, MutateCampaignResult.campaign. Type: enum (ResponseContentType)"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}/googleAds:mutate"/>
             <property name="pathParameters" value="customerId,"/>
         </class>
@@ -35,7 +35,7 @@
             <format>
                 <![CDATA[{
                                                                                         <#if (args.arg1)?has_content>
-                                    "mutateOperations": "${args.arg1}",                                </#if>
+                                    "mutateOperations": ${args.arg1},                                </#if>
                                                                                             <#if (args.arg2)?has_content>
                                     "partialFailure": "${args.arg2}",                                </#if>
                                                                                             <#if (args.arg3)?has_content>

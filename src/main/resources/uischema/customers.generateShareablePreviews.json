@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.generateShareablePreviews",
   "title": "Customers Generate Shareable Previews",
-  "help": "<h1>Customers Generate Shareable Previews</h1> <b>The customers.generateShareablePreviews operation.</b>",
+  "help": "Returns the requested Shareable Preview.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,26 +56,18 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The customer creating the shareable previews request."
+                    "helpTip": "The customer creating the shareable previews request."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "shareablePreviews",
-                    "displayName": "Shareable Previews",
+                    "name": "shareablePreviews[]",
+                    "displayName": "Shareable Previews [ ]",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The list of shareable previews to generate. Type: object (ShareablePreview)"
+                    "helpTip": "The list of shareable previews to generate. Type: object (ShareablePreview)"
                   }
                 }
               ]

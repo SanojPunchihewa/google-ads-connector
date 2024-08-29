@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.productLinkInvitations.remove",
   "title": "Customers Product Link Invitations Remove",
-  "help": "<h1>Customers Product Link Invitations Remove</h1> <b>The customers.productLinkInvitations.remove operation.</b>",
+  "help": "Remove a product link invitation.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the product link invitation being removed."
+                    "helpTip": "The ID of the product link invitation being removed."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The resource name of the product link invitation being removed. expected, in this format: Type: string"
+                    "helpTip": "The resource name of the product link invitation being removed. expected, in this format: Type: string"
                   }
                 }
               ]

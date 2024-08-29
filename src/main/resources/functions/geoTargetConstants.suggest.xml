@@ -24,7 +24,7 @@
     <parameter name="geoTargets"
                description="The geo target constant resource names to filter by. Type: object (GeoTargets)"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/geoTargetConstants:suggest"/>
         </class>
         <payloadFactory media-type="json" template-type="freemarker">
@@ -35,9 +35,9 @@
                                                                                             <#if (args.arg2)?has_content>
                                     "countryCode": "${args.arg2}",                                </#if>
                                                                                             <#if (args.arg3)?has_content>
-                                    "locationNames": "${args.arg3}",                                </#if>
+                                    "locationNames": ${args.arg3},                                </#if>
                                                                                             <#if (args.arg4)?has_content>
-                                    "geoTargets": "${args.arg4}"                                </#if>
+                                    "geoTargets": ${args.arg4}                                </#if>
                                                                                         }]]>
             </format>
             <args>

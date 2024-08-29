@@ -25,7 +25,7 @@
     <parameter name="currencyCode"
                description="The currency used for exchange rate conversion. By default, the account currency of the customer is used. Set this field only if the currency is different from the account currency. The list of valid currency codes can be found athttps://developers.google.com/google-ads/api/data/codes-formats#currency-codes. Type: string"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}:generateKeywordForecastMetrics"/>
             <property name="pathParameters" value="customerId,"/>
         </class>
@@ -33,9 +33,9 @@
             <format>
                 <![CDATA[{
                                                                                         <#if (args.arg1)?has_content>
-                                    "forecastPeriod": "${args.arg1}",                                </#if>
+                                    "forecastPeriod": ${args.arg1},                                </#if>
                                                                                             <#if (args.arg2)?has_content>
-                                    "campaign": "${args.arg2}",                                </#if>
+                                    "campaign": ${args.arg2},                                </#if>
                                                                                             <#if (args.arg3)?has_content>
                                     "currencyCode": "${args.arg3}"                                </#if>
                                                                                         }]]>

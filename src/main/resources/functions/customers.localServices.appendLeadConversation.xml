@@ -22,7 +22,7 @@
     <parameter name="conversations"
                description="Required. Conversations that are being appended. Type: object (Conversation)"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}/localServices:appendLeadConversation"/>
             <property name="pathParameters" value="customerId,"/>
         </class>
@@ -30,7 +30,7 @@
             <format>
                 <![CDATA[{
                                                                                         <#if (args.arg1)?has_content>
-                                    "conversations": "${args.arg1}"                                </#if>
+                                    "conversations": ${args.arg1}                                </#if>
                                                                                         }]]>
             </format>
             <args>

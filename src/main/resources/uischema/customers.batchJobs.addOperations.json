@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.batchJobs.addOperations",
   "title": "Customers Batch Jobs Add Operations",
-  "help": "<h1>Customers Batch Jobs Add Operations</h1> <b>The customers.batchJobs.addOperations operation.</b>",
+  "help": "Add operations to the batch job.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The resource name of the batch job."
+                    "helpTip": "The resource name of the batch job."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -81,12 +73,12 @@
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "mutateOperations",
+                    "name": "mutateoperations",
                     "displayName": "Mutate Operations",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The list of mutates being added. Type: object (MutateOperation)"
+                    "helpTip": "The list of mutates being added. Type: object (MutateOperation)"
                   }
                 }
               ]

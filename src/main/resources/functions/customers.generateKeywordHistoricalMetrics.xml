@@ -33,7 +33,7 @@
     <parameter name="language"
                description="The resource name of the language to target. Each keyword belongs to some set of languages; a keyword is included if language is one of its languages. If not set, all keywords will be included. Type: string"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}:generateKeywordHistoricalMetrics"/>
             <property name="pathParameters" value="customerId,"/>
         </class>
@@ -49,9 +49,9 @@
                                                                                             <#if (args.arg4)?has_content>
                                     "keywordPlanNetwork": "${args.arg4}",                                </#if>
                                                                                             <#if (args.arg5)?has_content>
-                                    "aggregateMetrics": "${args.arg5}",                                </#if>
+                                    "aggregateMetrics": ${args.arg5},                                </#if>
                                                                                             <#if (args.arg6)?has_content>
-                                    "historicalMetricsOptions": "${args.arg6}",                                </#if>
+                                    "historicalMetricsOptions": ${args.arg6},                                </#if>
                                                                                             <#if (args.arg7)?has_content>
                                     "language": "${args.arg7}"                                </#if>
                                                                                         }]]>

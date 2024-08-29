@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.biddingSeasonalityAdjustments.mutate",
   "title": "Customers Bidding Seasonality Adjustments Mutate",
-  "help": "<h1>Customers Bidding Seasonality Adjustments Mutate</h1> <b>The customers.biddingSeasonalityAdjustments.mutate operation.</b>",
+  "help": "Creates, updates, or removes seasonality adjustments. Operation statuses are returned.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. ID of the customer whose seasonality adjustments are being modified."
+                    "helpTip": "ID of the customer whose seasonality adjustments are being modified."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The list of operations to perform on individual seasonality adjustments. Type: object (BiddingSeasonalityAdjustmentOperation)"
+                    "helpTip": "The list of operations to perform on individual seasonality adjustments. Type: object (BiddingSeasonalityAdjustmentOperation)"
                   }
                 },
                 {

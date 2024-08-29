@@ -19,7 +19,7 @@
     <!-- Path Parameter List -->
     <parameter name="resourceName" description="Resource name of the third party app analytics link."/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath"
                       value="/v17/{resourceName=customers/*/thirdPartyAppAnalyticsLinks/*}:regenerateShareableLinkId"/>
             <property name="pathParameters" value="resourceName,"/>

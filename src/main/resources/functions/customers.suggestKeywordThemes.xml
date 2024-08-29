@@ -21,7 +21,7 @@
     <parameter name="suggestionInfo"
                description="Required. Information to get keyword theme suggestions. Required fields: Type: object (SmartCampaignSuggestionInfo)"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}:suggestKeywordThemes"/>
             <property name="pathParameters" value="customerId,"/>
         </class>
@@ -29,7 +29,7 @@
             <format>
                 <![CDATA[{
                                                                                         <#if (args.arg1)?has_content>
-                                    "suggestionInfo": "${args.arg1}"                                </#if>
+                                    "suggestionInfo": ${args.arg1}                                </#if>
                                                                                         }]]>
             </format>
             <args>

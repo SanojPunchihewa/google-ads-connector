@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.customerLifecycleGoal.configureCustomerLifecycleGoals",
   "title": "Customers Customer Lifecycle Goal Configure Customer Lifecycle Goals",
-  "help": "<h1>Customers Customer Lifecycle Goal Configure Customer Lifecycle Goals</h1> <b>The customers.customerLifecycleGoal.configureCustomerLifecycleGoals operation.</b>",
+  "help": "Process the given customer lifecycle configurations.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer performing the upload."
+                    "helpTip": "The ID of the customer performing the upload."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The operation to perform customer lifecycle goal update. Type: object (CustomerLifecycleGoalOperation)"
+                    "helpTip": "The operation to perform customer lifecycle goal update. Type: object (CustomerLifecycleGoalOperation)"
                   }
                 },
                 {

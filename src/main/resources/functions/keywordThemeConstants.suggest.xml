@@ -23,7 +23,7 @@
     <parameter name="languageCode"
                description="The two letter language code for get corresponding keyword theme for refining the scope of the query, default to &apos;en&apos; if not set. Type: string"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/keywordThemeConstants:suggest"/>
         </class>
         <payloadFactory media-type="json" template-type="freemarker">

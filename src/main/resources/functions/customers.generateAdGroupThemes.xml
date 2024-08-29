@@ -23,7 +23,7 @@
     <parameter name="adGroups"
                description="Required. A list of resource names of AdGroups to group keywords into.  Resource name format:customers/{customerId}/adGroups/{adGroupId} Type: string"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}:generateAdGroupThemes"/>
             <property name="pathParameters" value="customerId,"/>
         </class>

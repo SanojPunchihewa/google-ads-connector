@@ -21,7 +21,7 @@
     <parameter name="resourceName"
                description="Required. The resource name of the product link invitation being removed. expected, in this format: Type: string"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}/productLinkInvitations:remove"/>
             <property name="pathParameters" value="customerId,"/>
         </class>

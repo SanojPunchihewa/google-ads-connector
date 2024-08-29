@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.suggestSmartCampaignAd",
   "title": "Customers Suggest Smart Campaign Ad",
-  "help": "<h1>Customers Suggest Smart Campaign Ad</h1> <b>The customers.suggestSmartCampaignAd operation.</b>",
+  "help": "Suggests a Smart campaign ad compatible with the Ad family of resources, based on data points such as targeting and the business to advertise.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer."
+                    "helpTip": "The ID of the customer."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. Inputs used to suggest a Smart campaign ad. Required fields: finalUrl, languageCode, keywordThemes. Optional but recommended fields to improve the quality of the suggestion: business_setting and geo_target. Type: object (SmartCampaignSuggestionInfo)"
+                    "helpTip": "Inputs used to suggest a Smart campaign ad. Required fields: finalUrl, languageCode, keywordThemes. Optional but recommended fields to improve the quality of the suggestion: business_setting and geo_target. Type: object (SmartCampaignSuggestionInfo)"
                   }
                 }
               ]

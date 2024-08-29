@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.biddingStrategies.mutate",
   "title": "Customers Bidding Strategies Mutate",
-  "help": "<h1>Customers Bidding Strategies Mutate</h1> <b>The customers.biddingStrategies.mutate operation.</b>",
+  "help": "Creates, updates, or removes bidding strategies. Operation statuses are returned.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer whose bidding strategies are being modified."
+                    "helpTip": "The ID of the customer whose bidding strategies are being modified."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The list of operations to perform on individual bidding strategies. Type: object (BiddingStrategyOperation)"
+                    "helpTip": "The list of operations to perform on individual bidding strategies. Type: object (BiddingStrategyOperation)"
                   }
                 },
                 {

@@ -22,7 +22,7 @@
                description="Required. The product link invitation to be created. Type: enum (ProductLinkInvitationStatus)"/>
     <parameter name="resourceName" description="Required. Resource name of the product link invitation. Type: string"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}/productLinkInvitations:update"/>
             <property name="pathParameters" value="customerId,"/>
         </class>

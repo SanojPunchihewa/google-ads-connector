@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.generateKeywordHistoricalMetrics",
   "title": "Customers Generate Keyword Historical Metrics",
-  "help": "<h1>Customers Generate Keyword Historical Metrics</h1> <b>The customers.generateKeywordHistoricalMetrics operation.</b>",
+  "help": "Returns a list of keyword historical metrics.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -58,20 +58,12 @@
                     "required": "false",
                     "helpTip": "The ID of the customer with the recommendation."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "keywords",
-                    "displayName": "Keywords",
+                    "name": "keywords[]",
+                    "displayName": "Keywords [ ]",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",
@@ -92,8 +84,8 @@
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "geoTargetConstants",
-                    "displayName": "Geo Target Constants",
+                    "name": "geoTargetConstants[]",
+                    "displayName": "Geo Target Constants [ ]",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",

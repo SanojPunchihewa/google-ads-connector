@@ -23,7 +23,7 @@
     <parameter name="partialFailure"
                description="If true, successful operations will be carried out and invalid operations will return errors. If false, operations will be carried in a single transaction if and only if they are all valid. Default is false. Type: boolean"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}/recommendations:dismiss"/>
             <property name="pathParameters" value="customerId,"/>
         </class>
@@ -31,7 +31,7 @@
             <format>
                 <![CDATA[{
                                                                                         <#if (args.arg1)?has_content>
-                                    "operations": "${args.arg1}",                                </#if>
+                                    "operations": ${args.arg1},                                </#if>
                                                                                             <#if (args.arg2)?has_content>
                                     "partialFailure": "${args.arg2}"                                </#if>
                                                                                         }]]>

@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.campaignDrafts.promote",
   "title": "Customers Campaign Drafts Promote",
-  "help": "<h1>Customers Campaign Drafts Promote</h1> <b>The customers.campaignDrafts.promote operation.</b>",
+  "help": "Promotes the changes in a draft back to the base campaign.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The resource name of the campaign draft to promote."
+                    "helpTip": "The resource name of the campaign draft to promote."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {

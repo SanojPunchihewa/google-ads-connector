@@ -33,7 +33,7 @@
     <parameter name="seedInfo"
                description="Optional. Seed information for Keywords. This field is necessary for the following recommendationTypes: KEYWORD Type: object (SeedInfo)"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}/recommendations:generate"/>
             <property name="pathParameters" value="customerId,"/>
         </class>
@@ -45,15 +45,15 @@
                                                                                             <#if (args.arg2)?has_content>
                                     "advertisingChannelType": "${args.arg2}",                                </#if>
                                                                                             <#if (args.arg3)?has_content>
-                                    "adGroupInfo": "${args.arg3}",                                </#if>
+                                    "adGroupInfo": ${args.arg3},                                </#if>
                                                                                             <#if (args.arg4)?has_content>
                                     "campaignSitelinkCount": "${args.arg4}",                                </#if>
                                                                                             <#if (args.arg5)?has_content>
                                     "conversionTrackingStatus": "${args.arg5}",                                </#if>
                                                                                             <#if (args.arg6)?has_content>
-                                    "biddingInfo": "${args.arg6}",                                </#if>
+                                    "biddingInfo": ${args.arg6},                                </#if>
                                                                                             <#if (args.arg7)?has_content>
-                                    "seedInfo": "${args.arg7}"                                </#if>
+                                    "seedInfo": ${args.arg7}                                </#if>
                                                                                         }]]>
             </format>
             <args>

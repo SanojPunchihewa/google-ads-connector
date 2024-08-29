@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.googleAds.mutate",
   "title": "Customers Google Ads Mutate",
-  "help": "<h1>Customers Google Ads Mutate</h1> <b>The customers.googleAds.mutate operation.</b>",
+  "help": "Creates, updates, or removes resources. This method supports atomic transactions with multiple types of resources. For example, you can atomically create a campaign and a campaign budget, or perform up to thousands of mutates atomically.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,26 +56,18 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer whose resources are being modified."
+                    "helpTip": "The ID of the customer whose resources are being modified."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "mutateOperations",
+                    "name": "mutateoperations",
                     "displayName": "Mutate Operations",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The list of operations to perform on individual resources. Type: object (MutateOperation)"
+                    "helpTip": "The list of operations to perform on individual resources. Type: object (MutateOperation)"
                   }
                 },
                 {

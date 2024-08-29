@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.campaignDrafts.listAsyncErrors",
   "title": "Customers Campaign Drafts List Async Errors",
-  "help": "<h1>Customers Campaign Drafts List Async Errors</h1> <b>The customers.campaignDrafts.listAsyncErrors operation.</b>",
+  "help": "Returns all errors that occurred during CampaignDraft promote. Throws an error if called before campaign draft is promoted. Supports standard list paging.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,7 +56,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The name of the campaign draft from which to retrieve the async errors."
+                    "helpTip": "The name of the campaign draft from which to retrieve the async errors."
                   }
                 }
               ]

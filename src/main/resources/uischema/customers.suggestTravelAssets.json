@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.suggestTravelAssets",
   "title": "Customers Suggest Travel Assets",
-  "help": "<h1>Customers Suggest Travel Assets</h1> <b>The customers.suggestTravelAssets operation.</b>",
+  "help": "Returns Travel Asset suggestions. Asset suggestions are returned on a best-effort basis. There are no guarantees that all possible asset types will be returned for any given hotel property.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer."
+                    "helpTip": "The ID of the customer."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,14 +67,14 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The language specifications in BCP 47 format (for example, en-US, zh-CN, etc.) for the asset suggestions. Text will be in this language. Usually matches one of the campaign target languages. Type: string"
+                    "helpTip": "The language specifications in BCP 47 format (for example, en-US, zh-CN, etc.) for the asset suggestions. Text will be in this language. Usually matches one of the campaign target languages. Type: string"
                   }
                 },
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "placeIds",
-                    "displayName": "Place Ids",
+                    "name": "placeIds[]",
+                    "displayName": "Place Ids [ ]",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",

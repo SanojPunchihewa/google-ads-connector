@@ -28,7 +28,7 @@
     <parameter name="emailAddress"
                description="Email address of the user who should be invited on the created client customer. Accessible only to customers on the allow-list. Type: string"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}:createCustomerClient"/>
             <property name="pathParameters" value="customerId,"/>
         </class>
@@ -38,9 +38,9 @@
                                                                                         <#if (args.arg1)?has_content>
                                     "customerClient": ${args.arg1},                                </#if>
                                                                                             <#if (args.arg2)?has_content>
-                                    "accessRole": ${args.arg2},                                </#if>
+                                    "accessRole": "${args.arg2}",                                </#if>
                                                                                             <#if (args.arg3)?has_content>
-                                    "validateOnly": ${args.arg3},                                </#if>
+                                    "validateOnly": "${args.arg3}",                                </#if>
                                                                                             <#if (args.arg4)?has_content>
                                     "emailAddress": "${args.arg4}"                               </#if>
                                                                                         }]]>

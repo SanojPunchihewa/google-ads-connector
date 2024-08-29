@@ -21,7 +21,7 @@
     <parameter name="validateOnly"
                description="If true, the request is validated but no Long Running Operation is created. Only errors are returned. Type: boolean"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/{campaignDraft=customers/*/campaignDrafts/*}:promote"/>
             <property name="pathParameters" value="campaignDraft,"/>
         </class>

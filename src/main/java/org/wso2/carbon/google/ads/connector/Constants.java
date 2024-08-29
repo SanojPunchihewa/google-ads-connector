@@ -16,7 +16,7 @@
  *  under the License.
  */
 
-package org.wso2.carbon.googleAdNetworkconnector;
+package org.wso2.carbon.google.ads.connector;
 
 public class Constants {
 
@@ -31,7 +31,7 @@ public class Constants {
     public static final String PROPERTY_ACCESS_TOKEN = "_OH_INTERNAL_ACCESS_TOKEN_";
     public static final String PROPERTY_ERROR_CODE = "ERROR_CODE";
     public static final String PROPERTY_ERROR_MESSAGE = "ERROR_MESSAGE";
-    public static final String GENERAL_ERROR_MSG = "Google Ads Network connector encountered an error: ";
+    public static final String GENERAL_ERROR_MSG = "Google Ad Network connector encountered an error: ";
 
     static class ErrorCodes {
         public static final String INVALID_CONFIG = "701002";

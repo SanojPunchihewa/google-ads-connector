@@ -16,7 +16,7 @@
  *  under the License.
  */
 
-package org.wso2.carbon.googleAdNetworkconnector;
+package org.wso2.carbon.google.ads.connector;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

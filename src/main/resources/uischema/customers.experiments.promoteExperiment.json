@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.experiments.promoteExperiment",
   "title": "Customers Experiments Promote Experiment",
-  "help": "<h1>Customers Experiments Promote Experiment</h1> <b>The customers.experiments.promoteExperiment operation.</b>",
+  "help": "Promotes the trial campaign thus applying changes in the trial campaign to the base campaign. This method returns a long running operation that tracks the promotion of the experiment campaign. If it fails, a list of errors can be retrieved using the experiments.listExperimentAsyncErrors method. The operation's metadata will be a string containing the resource name of the created experiment.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The resource name of the experiment to promote."
+                    "helpTip": "The resource name of the experiment to promote."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {

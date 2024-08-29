@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.customInterests.mutate",
   "title": "Customers Custom Interests Mutate",
-  "help": "<h1>Customers Custom Interests Mutate</h1> <b>The customers.customInterests.mutate operation.</b>",
+  "help": "Creates or updates custom interests. Operation statuses are returned.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer whose custom interests are being modified."
+                    "helpTip": "The ID of the customer whose custom interests are being modified."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The list of operations to perform on individual custom interests. Type: object (CustomInterestOperation)"
+                    "helpTip": "The list of operations to perform on individual custom interests. Type: object (CustomInterestOperation)"
                   }
                 },
                 {

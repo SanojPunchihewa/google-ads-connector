@@ -45,7 +45,7 @@
     <parameter name="siteSeed"
                description="The site to generate ideas from, for example, www.example.com. Type: object (SiteSeed)"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}:generateKeywordIdeas"/>
             <property name="pathParameters" value="customerId,"/>
         </class>
@@ -65,19 +65,19 @@
                                                                                             <#if (args.arg6)?has_content>
                                     "keywordAnnotation": "${args.arg6}",                                </#if>
                                                                                             <#if (args.arg7)?has_content>
-                                    "aggregateMetrics": "${args.arg7}",                                </#if>
+                                    "aggregateMetrics": ${args.arg7},                                </#if>
                                                                                             <#if (args.arg8)?has_content>
-                                    "historicalMetricsOptions": "${args.arg8}",                                </#if>
+                                    "historicalMetricsOptions": ${args.arg8},                                </#if>
                                                                                             <#if (args.arg9)?has_content>
                                     "language": "${args.arg9}",                                </#if>
                                                                                             <#if (args.arg10)?has_content>
-                                    "keywordAndUrlSeed": "${args.arg10}",                                </#if>
+                                    "keywordAndUrlSeed": ${args.arg10},                                </#if>
                                                                                             <#if (args.arg11)?has_content>
-                                    "keywordSeed": "${args.arg11}",                                </#if>
+                                    "keywordSeed": ${args.arg11},                                </#if>
                                                                                             <#if (args.arg12)?has_content>
-                                    "urlSeed": "${args.arg12}",                                </#if>
+                                    "urlSeed": ${args.arg12},                                </#if>
                                                                                             <#if (args.arg13)?has_content>
-                                    "siteSeed": "${args.arg13}"                                </#if>
+                                    "siteSeed": ${args.arg13}                                </#if>
                                                                                         }]]>
             </format>
             <args>

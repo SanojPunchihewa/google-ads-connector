@@ -20,7 +20,7 @@
     <!-- Request Body Parameter List -->
     <parameter name="productLink" description="Required. The product link to be created. Type: object (ProductLink)"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}/productLinks:create"/>
             <property name="pathParameters" value="customerId,"/>
         </class>
@@ -28,7 +28,7 @@
             <format>
                 <![CDATA[{
                                                                                         <#if (args.arg1)?has_content>
-                                    "productLink": "${args.arg1}"                                </#if>
+                                    "productLink": ${args.arg1}                                </#if>
                                                                                         }]]>
             </format>
             <args>

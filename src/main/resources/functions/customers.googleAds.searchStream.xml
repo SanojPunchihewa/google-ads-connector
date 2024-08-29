@@ -22,7 +22,7 @@
     <parameter name="summaryRowSetting"
                description="Determines whether a summary row will be returned. By default, summary row is not returned. If requested, the summary row will be sent in a response by itself after all other query results are returned. Type: enum (SummaryRowSetting)"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}/googleAds:searchStream"/>
             <property name="pathParameters" value="customerId,"/>
         </class>

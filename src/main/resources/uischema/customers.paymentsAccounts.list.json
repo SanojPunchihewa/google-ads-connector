@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.paymentsAccounts.list",
   "title": "Customers Payments Accounts List",
-  "help": "<h1>Customers Payments Accounts List</h1> <b>The customers.paymentsAccounts.list operation.</b>",
+  "help": "Returns all payments accounts associated with all managers between the login customer ID and specified serving customer in the hierarchy, inclusive.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,7 +56,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer to apply the PaymentsAccount list operation to."
+                    "helpTip": "The ID of the customer to apply the PaymentsAccount list operation to."
                   }
                 }
               ]

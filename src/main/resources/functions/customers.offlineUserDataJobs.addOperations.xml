@@ -27,7 +27,7 @@
     <parameter name="enableWarnings"
                description="True to enable warnings for the offline user data job. When enabled, a warning will not block the OfflineUserDataJobOperation, and will also return warning messages about malformed field values. Type: boolean"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/{resourceName=customers/*/offlineUserDataJobs/*}:addOperations"/>
             <property name="pathParameters" value="resourceName,"/>
         </class>
@@ -35,7 +35,7 @@
             <format>
                 <![CDATA[{
                                                                                         <#if (args.arg1)?has_content>
-                                    "operations": "${args.arg1}",                                </#if>
+                                    "operations": ${args.arg1},                                </#if>
                                                                                             <#if (args.arg2)?has_content>
                                     "validateOnly": "${args.arg2}",                                </#if>
                                                                                             <#if (args.arg3)?has_content>

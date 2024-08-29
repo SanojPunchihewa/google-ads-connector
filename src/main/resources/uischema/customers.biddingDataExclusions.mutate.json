@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.biddingDataExclusions.mutate",
   "title": "Customers Bidding Data Exclusions Mutate",
-  "help": "<h1>Customers Bidding Data Exclusions Mutate</h1> <b>The customers.biddingDataExclusions.mutate operation.</b>",
+  "help": "Creates, updates, or removes data exclusions. Operation statuses are returned.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. ID of the customer whose data exclusions are being modified."
+                    "helpTip": "ID of the customer whose data exclusions are being modified."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The list of operations to perform on individual data exclusions. Type: object (BiddingDataExclusionOperation)"
+                    "helpTip": "The list of operations to perform on individual data exclusions. Type: object (BiddingDataExclusionOperation)"
                   }
                 },
                 {

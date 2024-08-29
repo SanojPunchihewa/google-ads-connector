@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.listAccessibleCustomers",
   "title": "Customers List Accessible Customers",
-  "help": "<h1>Customers List Accessible Customers</h1> <b>The customers.listAccessibleCustomers operation.</b>",
+  "help": "Returns resource names of customers directly accessible by the user authenticating the call.",
   "elements": [
     {
       "type": "attributeGroup",

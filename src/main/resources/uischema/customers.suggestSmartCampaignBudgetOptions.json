@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.suggestSmartCampaignBudgetOptions",
   "title": "Customers Suggest Smart Campaign Budget Options",
-  "help": "<h1>Customers Suggest Smart Campaign Budget Options</h1> <b>The customers.suggestSmartCampaignBudgetOptions operation.</b>",
+  "help": "Returns BudgetOption suggestions.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer whose budget options are to be suggested."
+                    "helpTip": "The ID of the customer whose budget options are to be suggested."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The resource name of the campaign to get suggestion for. Type: string"
+                    "helpTip": "The resource name of the campaign to get suggestion for. Type: string"
                   }
                 },
                 {
@@ -86,7 +78,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. Information needed to get budget options Type: object (SmartCampaignSuggestionInfo)"
+                    "helpTip": "Information needed to get budget options Type: object (SmartCampaignSuggestionInfo)"
                   }
                 }
               ]

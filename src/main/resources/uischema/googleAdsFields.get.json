@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "googleAdsFields.get",
   "title": "Google Ads Fields Get",
-  "help": "<h1>Google Ads Fields Get</h1> <b>The googleAdsFields.get operation.</b>",
+  "help": "Returns just the requested field.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,7 +56,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The resource name of the field to get."
+                    "helpTip": "The resource name of the field to get."
                   }
                 }
               ]

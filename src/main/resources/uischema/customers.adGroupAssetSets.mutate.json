@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.adGroupAssetSets.mutate",
   "title": "Customers Ad Group Asset Sets Mutate",
-  "help": "<h1>Customers Ad Group Asset Sets Mutate</h1> <b>The customers.adGroupAssetSets.mutate operation.</b>",
+  "help": "Creates, or removes ad group asset sets. Operation statuses are returned.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer whose ad group asset sets are being modified."
+                    "helpTip": "The ID of the customer whose ad group asset sets are being modified."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The list of operations to perform on individual ad group asset sets. Type: object (AdGroupAssetSetOperation)"
+                    "helpTip": "The list of operations to perform on individual ad group asset sets. Type: object (AdGroupAssetSetOperation)"
                   }
                 },
                 {

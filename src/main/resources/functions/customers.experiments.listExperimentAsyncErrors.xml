@@ -19,7 +19,7 @@
     <parameter name="resourceName"
                description="Required. The name of the experiment from which to retrieve the async errors."/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath"
                       value="/v17/{resourceName=customers/*/experiments/*}:listExperimentAsyncErrors"/>
             <property name="pathParameters" value="resourceName,"/>

@@ -16,7 +16,7 @@
 
 <template xmlns="http://ws.apache.org/ns/synapse" name="customers.listAccessibleCustomers">
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers:listAccessibleCustomers"/>
         </class>
         <property name="messageType" value="application/json" scope="axis2"/>

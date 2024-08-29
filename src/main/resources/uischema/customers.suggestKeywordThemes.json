@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.suggestKeywordThemes",
   "title": "Customers Suggest Keyword Themes",
-  "help": "<h1>Customers Suggest Keyword Themes</h1> <b>The customers.suggestKeywordThemes operation.</b>",
+  "help": "Suggests keyword themes to advertise on.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer."
+                    "helpTip": "The ID of the customer."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. Information to get keyword theme suggestions. Required fields: Type: object (SmartCampaignSuggestionInfo)"
+                    "helpTip": "Information to get keyword theme suggestions. Required fields: Type: object (SmartCampaignSuggestionInfo)"
                   }
                 }
               ]

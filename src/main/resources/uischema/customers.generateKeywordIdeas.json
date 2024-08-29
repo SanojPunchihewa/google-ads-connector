@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.generateKeywordIdeas",
   "title": "Customers Generate Keyword Ideas",
-  "help": "<h1>Customers Generate Keyword Ideas</h1> <b>The customers.generateKeywordIdeas operation.</b>",
+  "help": "Returns a list of keyword ideas.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -58,20 +58,12 @@
                     "required": "false",
                     "helpTip": "The ID of the customer with the recommendation."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "geoTargetConstants",
-                    "displayName": "Geo Target Constants",
+                    "name": "geoTargetConstants[]",
+                    "displayName": "Geo Target Constants [ ]",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",
@@ -125,8 +117,8 @@
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "keywordAnnotation",
-                    "displayName": "Keyword Annotation",
+                    "name": "keywordAnnotation[]",
+                    "displayName": "Keyword Annotation [ ]",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",

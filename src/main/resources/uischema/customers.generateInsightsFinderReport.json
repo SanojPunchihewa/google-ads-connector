@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.generateInsightsFinderReport",
   "title": "Customers Generate Insights Finder Report",
-  "help": "<h1>Customers Generate Insights Finder Report</h1> <b>The customers.generateInsightsFinderReport operation.</b>",
+  "help": "Creates a saved report that can be viewed in the Insights Finder tool.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer."
+                    "helpTip": "The ID of the customer."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. A baseline audience for this report, typically all people in a region. Type: object (BasicInsightsAudience)"
+                    "helpTip": "A baseline audience for this report, typically all people in a region. Type: object (BasicInsightsAudience)"
                   }
                 },
                 {
@@ -86,7 +78,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The specific audience of interest for this report. The insights in the report will be based on attributes more prevalent in this audience than in the report's baseline audience. Type: object (BasicInsightsAudience)"
+                    "helpTip": "The specific audience of interest for this report. The insights in the report will be based on attributes more prevalent in this audience than in the report's baseline audience. Type: object (BasicInsightsAudience)"
                   }
                 },
                 {

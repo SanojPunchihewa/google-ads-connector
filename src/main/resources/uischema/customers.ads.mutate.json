@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.ads.mutate",
   "title": "Customers Ads Mutate",
-  "help": "<h1>Customers Ads Mutate</h1> <b>The customers.ads.mutate operation.</b>",
+  "help": "Updates ads. Operation statuses are returned. Updating ads is not supported for TextAd, ExpandedDynamicSearchAd, GmailAd and ImageAd.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer whose ads are being modified."
+                    "helpTip": "The ID of the customer whose ads are being modified."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The list of operations to perform on individual ads. Type: object (AdOperation)"
+                    "helpTip": "The list of operations to perform on individual ads. Type: object (AdOperation)"
                   }
                 },
                 {

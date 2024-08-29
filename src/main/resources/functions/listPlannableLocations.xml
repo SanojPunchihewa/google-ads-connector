@@ -16,7 +16,7 @@
 
 <template xmlns="http://ws.apache.org/ns/synapse" name="listPlannableLocations">
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17:listPlannableLocations"/>
         </class>
         <payloadFactory media-type="json">

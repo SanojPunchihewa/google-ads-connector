@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.offlineUserDataJobs.addOperations",
   "title": "Customers Offline User Data Jobs Add Operations",
-  "help": "<h1>Customers Offline User Data Jobs Add Operations</h1> <b>The customers.offlineUserDataJobs.addOperations operation.</b>",
+  "help": "Adds operations to the offline user data job.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The resource name of the OfflineUserDataJob."
+                    "helpTip": "The resource name of the OfflineUserDataJob."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The list of operations to be done. Type: object (OfflineUserDataJobOperation)"
+                    "helpTip": "The list of operations to be done. Type: object (OfflineUserDataJobOperation)"
                   }
                 },
                 {

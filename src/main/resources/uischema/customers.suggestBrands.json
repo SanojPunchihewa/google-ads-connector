@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.suggestBrands",
   "title": "Customers Suggest Brands",
-  "help": "<h1>Customers Suggest Brands</h1> <b>The customers.suggestBrands operation.</b>",
+  "help": "Rpc to return a list of matching brands based on a prefix for this customer.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,22 +56,14 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer onto which to apply the brand suggestion operation."
+                    "helpTip": "The ID of the customer onto which to apply the brand suggestion operation."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "selectedBrands",
-                    "displayName": "Selected Brands",
+                    "name": "selectedBrands[]",
+                    "displayName": "Selected Brands [ ]",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",
@@ -86,7 +78,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The prefix of a brand name. Type: string"
+                    "helpTip": "The prefix of a brand name. Type: string"
                   }
                 }
               ]

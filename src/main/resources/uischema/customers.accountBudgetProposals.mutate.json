@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.accountBudgetProposals.mutate",
   "title": "Customers Account Budget Proposals Mutate",
-  "help": "<h1>Customers Account Budget Proposals Mutate</h1> <b>The customers.accountBudgetProposals.mutate operation.</b>",
+  "help": "Creates, updates, or removes account budget proposals. Operation statuses are returned.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer."
+                    "helpTip": "The ID of the customer."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The operation to perform on an individual account-level budget proposal. Type: object (AccountBudgetProposalOperation)"
+                    "helpTip": "The operation to perform on an individual account-level budget proposal. Type: object (AccountBudgetProposalOperation)"
                   }
                 },
                 {

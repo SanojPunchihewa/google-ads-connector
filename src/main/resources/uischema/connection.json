@@ -89,6 +89,17 @@
                 {
                   "type": "attribute",
                   "value": {
+                    "name": "loginCustomerId",
+                    "displayName": "Login Customer ID",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "The customer ID of the Manager Account."
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
                     "name": "tokenEndpoint",
                     "displayName": "Token Endpoint",
                     "inputType": "string",

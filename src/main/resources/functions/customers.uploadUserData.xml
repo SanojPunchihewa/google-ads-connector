@@ -23,7 +23,7 @@
     <parameter name="customerMatchUserListMetadata"
                description="Metadata for data updates to a Customer Match user list. Type: object (CustomerMatchUserListMetadata)"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}:uploadUserData"/>
             <property name="pathParameters" value="customerId,"/>
         </class>
@@ -31,9 +31,9 @@
             <format>
                 <![CDATA[{
                                                                                         <#if (args.arg1)?has_content>
-                                    "operations": "${args.arg1}",                                </#if>
+                                    "operations": ${args.arg1},                                </#if>
                                                                                             <#if (args.arg2)?has_content>
-                                    "customerMatchUserListMetadata": "${args.arg2}"                                </#if>
+                                    "customerMatchUserListMetadata": ${args.arg2}                                </#if>
                                                                                         }]]>
             </format>
             <args>

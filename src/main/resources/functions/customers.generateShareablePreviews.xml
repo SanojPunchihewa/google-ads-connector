@@ -21,7 +21,7 @@
     <parameter name="shareablePreviews"
                description="Required. The list of shareable previews to generate. Type: object (ShareablePreview)"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}:generateShareablePreviews"/>
             <property name="pathParameters" value="customerId,"/>
         </class>
@@ -29,7 +29,7 @@
             <format>
                 <![CDATA[{
                                                                                         <#if (args.arg1)?has_content>
-                                    "shareablePreviews": "${args.arg1}"                                </#if>
+                                    "shareablePreviews": ${args.arg1}                                </#if>
                                                                                         }]]>
             </format>
             <args>

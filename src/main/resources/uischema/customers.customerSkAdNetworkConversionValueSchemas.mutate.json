@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.customerSkAdNetworkConversionValueSchemas.mutate",
   "title": "Customers Customer Sk Ad Network Conversion Value Schemas Mutate",
-  "help": "<h1>Customers Customer Sk Ad Network Conversion Value Schemas Mutate</h1> <b>The customers.customerSkAdNetworkConversionValueSchemas.mutate operation.</b>",
+  "help": "Creates or updates the CustomerSkAdNetworkConversionValueSchema.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -58,15 +58,7 @@
                     "required": "false",
                     "helpTip": "The ID of the customer whose shared sets are being modified."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {

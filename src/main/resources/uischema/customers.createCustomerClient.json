@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.createCustomerClient",
   "title": "Customers Create Customer Client",
-  "help": "<h1>Customers Create Customer Client</h1> <b>The customers.createCustomerClient operation.</b>",
+  "help": "Creates a new client under manager. The new client customer is returned.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the Manager under whom client customer is being created."
+                    "helpTip": "The ID of the Manager under whom client customer is being created."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The new client customer to create. The resource name on this customer will be ignored. Type: object (Customer)"
+                    "helpTip": "The new client customer to create. The resource name on this customer will be ignored. Type: object (Customer)"
                   }
                 },
                 {

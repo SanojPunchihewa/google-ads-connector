@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.experiments.scheduleExperiment",
   "title": "Customers Experiments Schedule Experiment",
-  "help": "<h1>Customers Experiments Schedule Experiment</h1> <b>The customers.experiments.scheduleExperiment operation.</b>",
+  "help": "Schedule an experiment. The in design campaign will be converted into a real campaign (called the experiment campaign) that will begin serving ads if successfully created.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The scheduled experiment."
+                    "helpTip": "The scheduled experiment."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {

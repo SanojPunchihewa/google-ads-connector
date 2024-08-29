@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.campaignLabels.mutate",
   "title": "Customers Campaign Labels Mutate",
-  "help": "<h1>Customers Campaign Labels Mutate</h1> <b>The customers.campaignLabels.mutate operation.</b>",
+  "help": "Creates and removes campaign-label relationships. Operation statuses are returned.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. ID of the customer whose campaign-label relationships are being modified."
+                    "helpTip": "ID of the customer whose campaign-label relationships are being modified."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The list of operations to perform on campaign-label relationships. Type: object (CampaignLabelOperation)"
+                    "helpTip": "The list of operations to perform on campaign-label relationships. Type: object (CampaignLabelOperation)"
                   }
                 },
                 {

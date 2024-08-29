@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.adGroupCustomizers.mutate",
   "title": "Customers Ad Group Customizers Mutate",
-  "help": "<h1>Customers Ad Group Customizers Mutate</h1> <b>The customers.adGroupCustomizers.mutate operation.</b>",
+  "help": "Creates, updates or removes ad group customizers. Operation statuses are returned.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer whose ad group customizers are being modified."
+                    "helpTip": "The ID of the customer whose ad group customizers are being modified."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The list of operations to perform on individual ad group customizers. Type: object (AdGroupCustomizerOperation)"
+                    "helpTip": "The list of operations to perform on individual ad group customizers. Type: object (AdGroupCustomizerOperation)"
                   }
                 },
                 {

@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.campaigns.mutate",
   "title": "Customers Campaigns Mutate",
-  "help": "<h1>Customers Campaigns Mutate</h1> <b>The customers.campaigns.mutate operation.</b>",
+  "help": "Creates, updates, or removes campaigns. Operation statuses are returned.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer whose campaigns are being modified."
+                    "helpTip": "The ID of the customer whose campaigns are being modified."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The list of operations to perform on individual campaigns. Type: object (CampaignOperation)"
+                    "helpTip": "The list of operations to perform on individual campaigns. Type: object (CampaignOperation)"
                   }
                 },
                 {

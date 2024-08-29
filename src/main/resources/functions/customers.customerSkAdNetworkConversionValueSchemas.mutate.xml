@@ -25,7 +25,7 @@
     <parameter name="enableWarnings"
                description="Optional. If true, enables returning warnings. Warnings return error messages and error codes without blocking the execution of the mutate operation. Type: boolean"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath"
                       value="/v17/customers/{customerId}/customerSkAdNetworkConversionValueSchemas:mutate"/>
             <property name="pathParameters" value="customerId,"/>
@@ -34,7 +34,7 @@
             <format>
                 <![CDATA[{
                                                                                         <#if (args.arg1)?has_content>
-                                    "operation": "${args.arg1}",                                </#if>
+                                    "operation": ${args.arg1},                                </#if>
                                                                                             <#if (args.arg2)?has_content>
                                     "validateOnly": "${args.arg2}",                                </#if>
                                                                                             <#if (args.arg3)?has_content>

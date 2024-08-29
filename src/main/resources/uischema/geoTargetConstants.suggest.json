@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "geoTargetConstants.suggest",
   "title": "Geo Target Constants Suggest",
-  "help": "<h1>Geo Target Constants Suggest</h1> <b>The geoTargetConstants.suggest operation.</b>",
+  "help": "Returns GeoTargetConstant suggestions by location name or by resource name.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -46,7 +46,7 @@
           {
             "type": "attributeGroup",
             "value": {
-              "groupName": "Request Body",
+              "groupName": "Parameters",
               "elements": [
                 {
                   "type": "attribute",

@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.uploadUserData",
   "title": "Customers Upload User Data",
-  "help": "<h1>Customers Upload User Data</h1> <b>The customers.uploadUserData operation.</b>",
+  "help": "Uploads the given user data.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer for which to update the user data."
+                    "helpTip": "The ID of the customer for which to update the user data."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The list of operations to be done. Type: object (UserDataOperation)"
+                    "helpTip": "The list of operations to be done. Type: object (UserDataOperation)"
                   }
                 },
                 {

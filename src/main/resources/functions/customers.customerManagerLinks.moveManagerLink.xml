@@ -25,7 +25,7 @@
     <parameter name="validateOnly"
                description="If true, the request is validated but not executed. Only errors are returned, not results. Type: boolean"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}/customerManagerLinks:moveManagerLink"/>
             <property name="pathParameters" value="customerId,"/>
         </class>

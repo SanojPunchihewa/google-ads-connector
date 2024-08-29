@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.invoices.list",
   "title": "Customers Invoices List",
-  "help": "<h1>Customers Invoices List</h1> <b>The customers.invoices.list operation.</b>",
+  "help": "Returns all invoices associated with a billing setup, for a given month.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,7 +56,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer to fetch invoices for."
+                    "helpTip": "The ID of the customer to fetch invoices for."
                   }
                 }
               ]

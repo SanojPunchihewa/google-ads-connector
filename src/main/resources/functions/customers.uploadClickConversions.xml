@@ -29,7 +29,7 @@
     <parameter name="jobId"
                description="Optional. Optional input to set job ID. Must be a non-negative number that is less than 2^31 if provided. If this field is not provided, the API will generate a job ID in the range [2^31, (2^63)-1]. The API will return the value for this request in thejobIdfield of theUploadClickConversionsResponse. Type: integer"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}:uploadClickConversions"/>
             <property name="pathParameters" value="customerId,"/>
         </class>
@@ -37,7 +37,7 @@
             <format>
                 <![CDATA[{
                                                                                         <#if (args.arg1)?has_content>
-                                    "conversions": "${args.arg1}",                                </#if>
+                                    "conversions": ${args.arg1},                                </#if>
                                                                                             <#if (args.arg2)?has_content>
                                     "partialFailure": "${args.arg2}",                                </#if>
                                                                                             <#if (args.arg3)?has_content>

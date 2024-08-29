@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.generateAudienceCompositionInsights",
   "title": "Customers Generate Audience Composition Insights",
-  "help": "<h1>Customers Generate Audience Composition Insights</h1> <b>The customers.generateAudienceCompositionInsights operation.</b>",
+  "help": "Returns a collection of attributes that are represented in an audience of interest, with metrics that compare each attribute's share of the audience with its share of a baseline audience.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer."
+                    "helpTip": "The ID of the customer."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The audience of interest for which insights are being requested. Type: object (InsightsAudience)"
+                    "helpTip": "The audience of interest for which insights are being requested. Type: object (InsightsAudience)"
                   }
                 },
                 {
@@ -103,12 +95,12 @@
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "dimensions",
-                    "displayName": "Dimensions",
+                    "name": "dimensions[]",
+                    "displayName": "Dimensions [ ]",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The audience dimensions for which composition insights should be returned. Type: enum (AudienceInsightsDimension)"
+                    "helpTip": "The audience dimensions for which composition insights should be returned. Type: enum (AudienceInsightsDimension)"
                   }
                 },
                 {

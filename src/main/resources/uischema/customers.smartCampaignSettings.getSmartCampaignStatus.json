@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.smartCampaignSettings.getSmartCampaignStatus",
   "title": "Customers Smart Campaign Settings Get Smart Campaign Status",
-  "help": "<h1>Customers Smart Campaign Settings Get Smart Campaign Status</h1> <b>The customers.smartCampaignSettings.getSmartCampaignStatus operation.</b>",
+  "help": "Returns the status of the requested Smart campaign.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,7 +56,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The resource name of the Smart campaign setting belonging to the Smart campaign to fetch the status of."
+                    "helpTip": "The resource name of the Smart campaign setting belonging to the Smart campaign to fetch the status of."
                   }
                 }
               ]

@@ -21,7 +21,7 @@
     <parameter name="productLinkInvitation"
                description="Required. The product link invitation to be created. Type: object (ProductLinkInvitation)"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}/productLinkInvitations:create"/>
             <property name="pathParameters" value="customerId,"/>
         </class>
@@ -29,7 +29,7 @@
             <format>
                 <![CDATA[{
                                                                                         <#if (args.arg1)?has_content>
-                                    "productLinkInvitation": "${args.arg1}"                                </#if>
+                                    "productLinkInvitation": ${args.arg1}                                </#if>
                                                                                         }]]>
             </format>
             <args>

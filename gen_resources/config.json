@@ -8,7 +8,7 @@
             ],
             "project": {
                 "groupId": "org.wso2.carbon.esb.connector",
-                "artifactId": "org.wso2.carbon.esb.connector.google.ads",
+                "artifactId": "google.ads",
                 "version": "1.0.0-SNAPSHOT"
             },
             "iconFolderPath": ""

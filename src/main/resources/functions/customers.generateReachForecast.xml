@@ -38,7 +38,7 @@
     <parameter name="customerReachGroup"
                description="The name of the customer being planned for. This is a user-defined value. Type: string"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}:generateReachForecast"/>
             <property name="pathParameters" value="customerId,"/>
         </class>
@@ -46,15 +46,15 @@
             <format>
                 <![CDATA[{
                                                                                         <#if (args.arg1)?has_content>
-                                    "campaignDuration": "${args.arg1}",                                </#if>
+                                    "campaignDuration": ${args.arg1},                                </#if>
                                                                                             <#if (args.arg2)?has_content>
-                                    "cookieFrequencyCapSetting": "${args.arg2}",                                </#if>
+                                    "cookieFrequencyCapSetting": ${args.arg2},                                </#if>
                                                                                             <#if (args.arg3)?has_content>
-                                    "targeting": "${args.arg3}",                                </#if>
+                                    "targeting": ${args.arg3},                                </#if>
                                                                                             <#if (args.arg4)?has_content>
-                                    "plannedProducts": "${args.arg4}",                                </#if>
+                                    "plannedProducts": ${args.arg4},                                </#if>
                                                                                             <#if (args.arg5)?has_content>
-                                    "forecastMetricOptions": "${args.arg5}",                                </#if>
+                                    "forecastMetricOptions": ${args.arg5},                                </#if>
                                                                                             <#if (args.arg6)?has_content>
                                     "currencyCode": "${args.arg6}",                                </#if>
                                                                                             <#if (args.arg7)?has_content>
@@ -62,7 +62,7 @@
                                                                                             <#if (args.arg8)?has_content>
                                     "minEffectiveFrequency": "${args.arg8}",                                </#if>
                                                                                             <#if (args.arg9)?has_content>
-                                    "effectiveFrequencyLimit": "${args.arg9}",                                </#if>
+                                    "effectiveFrequencyLimit": ${args.arg9},                                </#if>
                                                                                             <#if (args.arg10)?has_content>
                                     "customerReachGroup": "${args.arg10}"                                </#if>
                                                                                         }]]>

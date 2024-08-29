@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "keywordThemeConstants.suggest",
   "title": "Keyword Theme Constants Suggest",
-  "help": "<h1>Keyword Theme Constants Suggest</h1> <b>The keywordThemeConstants.suggest operation.</b>",
+  "help": "Returns KeywordThemeConstant suggestions by keyword themes.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -46,7 +46,7 @@
           {
             "type": "attributeGroup",
             "value": {
-              "groupName": "Request Body",
+              "groupName": "Parameters",
               "elements": [
                 {
                   "type": "attribute",

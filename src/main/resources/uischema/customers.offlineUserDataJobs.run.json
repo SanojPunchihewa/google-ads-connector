@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.offlineUserDataJobs.run",
   "title": "Customers Offline User Data Jobs Run",
-  "help": "<h1>Customers Offline User Data Jobs Run</h1> <b>The customers.offlineUserDataJobs.run operation.</b>",
+  "help": "Runs the offline user data job.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The resource name of the OfflineUserDataJob to run."
+                    "helpTip": "The resource name of the OfflineUserDataJob to run."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {

@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.batchJobs.mutate",
   "title": "Customers Batch Jobs Mutate",
-  "help": "<h1>Customers Batch Jobs Mutate</h1> <b>The customers.batchJobs.mutate operation.</b>",
+  "help": "Mutates a batch job.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer for which to create a batch job."
+                    "helpTip": "The ID of the customer for which to create a batch job."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The operation to perform on an individual batch job. Type: object (BatchJobOperation)"
+                    "helpTip": "The operation to perform on an individual batch job. Type: object (BatchJobOperation)"
                   }
                 }
               ]

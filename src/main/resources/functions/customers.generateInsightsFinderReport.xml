@@ -25,7 +25,7 @@
     <parameter name="customerInsightsGroup"
                description="The name of the customer being planned for. This is a user-defined value. Type: string"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}:generateInsightsFinderReport"/>
             <property name="pathParameters" value="customerId,"/>
         </class>
@@ -33,9 +33,9 @@
             <format>
                 <![CDATA[{
                                                                                         <#if (args.arg1)?has_content>
-                                    "baselineAudience": "${args.arg1}",                                </#if>
+                                    "baselineAudience": ${args.arg1},                                </#if>
                                                                                             <#if (args.arg2)?has_content>
-                                    "specificAudience": "${args.arg2}",                                </#if>
+                                    "specificAudience": ${args.arg2},                                </#if>
                                                                                             <#if (args.arg3)?has_content>
                                     "customerInsightsGroup": "${args.arg3}"                                </#if>
                                                                                         }]]>

@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.adGroupAdLabels.mutate",
   "title": "Customers Ad Group Ad Labels Mutate",
-  "help": "<h1>Customers Ad Group Ad Labels Mutate</h1> <b>The customers.adGroupAdLabels.mutate operation.</b>",
+  "help": "Creates and removes ad group ad labels. Operation statuses are returned.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. ID of the customer whose ad group ad labels are being modified."
+                    "helpTip": "ID of the customer whose ad group ad labels are being modified."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The list of operations to perform on ad group ad labels. Type: object (AdGroupAdLabelOperation)"
+                    "helpTip": "The list of operations to perform on ad group ad labels. Type: object (AdGroupAdLabelOperation)"
                   }
                 },
                 {

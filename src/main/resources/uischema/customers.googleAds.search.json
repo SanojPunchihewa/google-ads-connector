@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.googleAds.search",
   "title": "Customers Google Ads Search",
-  "help": "<h1>Customers Google Ads Search</h1> <b>The customers.googleAds.search operation.</b>",
+  "help": "Returns all rows that match the search query.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer being queried."
+                    "helpTip": "The ID of the customer being queried."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The query string. Type: string"
+                    "helpTip": "The query string. Type: string"
                   }
                 },
                 {

@@ -19,7 +19,7 @@
     <parameter name="customerId"
                description="Required. The ID of the customer for whom we are requesting verification  information."/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}/getIdentityVerification"/>
             <property name="pathParameters" value="customerId,"/>
         </class>

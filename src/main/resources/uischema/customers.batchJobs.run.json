@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.batchJobs.run",
   "title": "Customers Batch Jobs Run",
-  "help": "<h1>Customers Batch Jobs Run</h1> <b>The customers.batchJobs.run operation.</b>",
+  "help": "Runs the batch job.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,7 +56,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The resource name of the BatchJob to run."
+                    "helpTip": "The resource name of the BatchJob to run."
                   }
                 }
               ]

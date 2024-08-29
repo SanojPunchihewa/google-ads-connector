@@ -16,7 +16,7 @@
  *  under the License.
  */
 
-package org.wso2.carbon.googleAdNetworkconnector;
+package org.wso2.carbon.google.ads.connector;
 
 /**
  * The Token object holds the access token information.

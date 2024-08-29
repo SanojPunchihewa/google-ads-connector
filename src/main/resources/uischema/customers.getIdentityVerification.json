@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.getIdentityVerification",
   "title": "Customers Get Identity Verification",
-  "help": "<h1>Customers Get Identity Verification</h1> <b>The customers.getIdentityVerification operation.</b>",
+  "help": "Returns Identity Verification information.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,7 +56,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer for whom we are requesting verification  information."
+                    "helpTip": "The ID of the customer for whom we are requesting verification  information."
                   }
                 }
               ]

@@ -18,7 +18,7 @@
     <!-- Path Parameter List -->
     <parameter name="name" description="The name of the operation resource to be cancelled."/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/{name=customers/*/operations/*}:cancel"/>
             <property name="pathParameters" value="name,"/>
         </class>

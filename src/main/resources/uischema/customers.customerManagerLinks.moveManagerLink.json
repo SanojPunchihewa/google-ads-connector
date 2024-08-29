@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.customerManagerLinks.moveManagerLink",
   "title": "Customers Customer Manager Links Move Manager Link",
-  "help": "<h1>Customers Customer Manager Links Move Manager Link</h1> <b>The customers.customerManagerLinks.moveManagerLink operation.</b>",
+  "help": "Moves a client customer to a new manager customer. This simplifies the complex request that requires two operations to move a client customer to a new manager, for example: 1. Update operation with Status INACTIVE (previous manager) and, 2. Update operation with Status ACTIVE (new manager).",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the client customer that is being moved."
+                    "helpTip": "The ID of the client customer that is being moved."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The resource name of the previous CustomerManagerLink. The resource name has the form:customers\/{customerId}\/customerManagerLinks\/{manager_customer_id}~{managerLinkId} Type: string"
+                    "helpTip": "The resource name of the previous CustomerManagerLink. The resource name has the form:customers\/{customerId}\/customerManagerLinks\/{manager_customer_id}~{managerLinkId} Type: string"
                   }
                 },
                 {
@@ -86,7 +78,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The resource name of the new manager customer that the client wants to move to. Customer resource names have the format: \"customers\/{customerId}\" Type: string"
+                    "helpTip": "The resource name of the new manager customer that the client wants to move to. Customer resource names have the format: \"customers\/{customerId}\" Type: string"
                   }
                 },
                 {

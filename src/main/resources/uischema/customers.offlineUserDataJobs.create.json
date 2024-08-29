@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.offlineUserDataJobs.create",
   "title": "Customers Offline User Data Jobs Create",
-  "help": "<h1>Customers Offline User Data Jobs Create</h1> <b>The customers.offlineUserDataJobs.create operation.</b>",
+  "help": "Creates an offline user data job.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer for which to create an offline user data job."
+                    "helpTip": "The ID of the customer for which to create an offline user data job."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The offline user data job to be created. Type: object (OfflineUserDataJob)"
+                    "helpTip": "The offline user data job to be created. Type: object (OfflineUserDataJob)"
                   }
                 },
                 {

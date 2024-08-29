@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.productLinks.create",
   "title": "Customers Product Links Create",
-  "help": "<h1>Customers Product Links Create</h1> <b>The customers.productLinks.create operation.</b>",
+  "help": "Creates a product link.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer for which the product link is created."
+                    "helpTip": "The ID of the customer for which the product link is created."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The product link to be created. Type: object (ProductLink)"
+                    "helpTip": "The product link to be created. Type: object (ProductLink)"
                   }
                 }
               ]

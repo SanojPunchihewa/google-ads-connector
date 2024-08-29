@@ -22,7 +22,7 @@
     <parameter name="assetsWithFieldType"
                description="Required. List of assets with field type to be removed from the AdGroupAd. Type: object (AssetsWithFieldType)"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath"
                       value="/v17/{adGroupAd=customers/*/adGroupAds/*}:removeAutomaticallyCreatedAssets"/>
             <property name="pathParameters" value="adGroupAd,"/>
@@ -31,7 +31,7 @@
             <format>
                 <![CDATA[{
                                                                                         <#if (args.arg1)?has_content>
-                                    "assetsWithFieldType": "${args.arg1}"                                </#if>
+                                    "assetsWithFieldType": ${args.arg1}                                </#if>
                                                                                         }]]>
             </format>
             <args>

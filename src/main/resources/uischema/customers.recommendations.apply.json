@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.recommendations.apply",
   "title": "Customers Recommendations Apply",
-  "help": "<h1>Customers Recommendations Apply</h1> <b>The customers.recommendations.apply operation.</b>",
+  "help": "Applies given recommendations with corresponding apply parameters.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer with the recommendation."
+                    "helpTip": "The ID of the customer with the recommendation."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The list of operations to apply recommendations. If partialFailure=false all recommendations should be of the same type There is a limit of 100 operations per request. Type: object (ApplyRecommendationOperation)"
+                    "helpTip": "The list of operations to apply recommendations. If partialFailure=false all recommendations should be of the same type There is a limit of 100 operations per request. Type: object (ApplyRecommendationOperation)"
                   }
                 },
                 {

@@ -23,7 +23,7 @@
                description="Optional. Ids of the brands already selected by advertisers. They will be excluded in response. These are expected to be brand ids not brand names. Type: string"/>
     <parameter name="brandPrefix" description="Required. The prefix of a brand name. Type: string"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}:suggestBrands"/>
             <property name="pathParameters" value="customerId,"/>
         </class>

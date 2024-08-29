@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.campaignBidModifiers.mutate",
   "title": "Customers Campaign Bid Modifiers Mutate",
-  "help": "<h1>Customers Campaign Bid Modifiers Mutate</h1> <b>The customers.campaignBidModifiers.mutate operation.</b>",
+  "help": "Creates, updates, or removes campaign bid modifiers. Operation statuses are returned.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. ID of the customer whose campaign bid modifiers are being modified."
+                    "helpTip": "ID of the customer whose campaign bid modifiers are being modified."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The list of operations to perform on individual campaign bid modifiers. Type: object (CampaignBidModifierOperation)"
+                    "helpTip": "The list of operations to perform on individual campaign bid modifiers. Type: object (CampaignBidModifierOperation)"
                   }
                 },
                 {

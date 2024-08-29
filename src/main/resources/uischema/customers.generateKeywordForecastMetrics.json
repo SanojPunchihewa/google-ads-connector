@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.generateKeywordForecastMetrics",
   "title": "Customers Generate Keyword Forecast Metrics",
-  "help": "<h1>Customers Generate Keyword Forecast Metrics</h1> <b>The customers.generateKeywordForecastMetrics operation.</b>",
+  "help": "Returns metrics (such as impressions, clicks, total cost) of a keyword forecast for the given campaign.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -58,15 +58,7 @@
                     "required": "false",
                     "helpTip": "The ID of the customer."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -86,7 +78,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The campaign used in the forecast. Type: object (CampaignToForecast)"
+                    "helpTip": "The campaign used in the forecast. Type: object (CampaignToForecast)"
                   }
                 },
                 {

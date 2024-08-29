@@ -22,7 +22,7 @@
     <parameter name="pageSize"
                description="Number of elements to retrieve in a single page. When too large a page is requested, the server may decide to further limit the number of returned resources. Type: integer"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/googleAdsFields:search"/>
         </class>
         <payloadFactory media-type="json" template-type="freemarker">

@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.localServices.appendLeadConversation",
   "title": "Customers Local Services Append Lead Conversation",
-  "help": "<h1>Customers Local Services Append Lead Conversation</h1> <b>The customers.localServices.appendLeadConversation operation.</b>",
+  "help": "RPC to append Local Services Lead Conversation resources to Local Services Lead resources.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,26 +56,18 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The Id of the customer which owns the leads onto which the conversations will be appended."
+                    "helpTip": "The Id of the customer which owns the leads onto which the conversations will be appended."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "conversations",
-                    "displayName": "Conversations",
+                    "name": "conversations[]",
+                    "displayName": "Conversations [ ]",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. Conversations that are being appended. Type: object (Conversation)"
+                    "helpTip": "Conversations that are being appended. Type: object (Conversation)"
                   }
                 }
               ]

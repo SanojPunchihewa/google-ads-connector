@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.startIdentityVerification",
   "title": "Customers Start Identity Verification",
-  "help": "<h1>Customers Start Identity Verification</h1> <b>The customers.startIdentityVerification operation.</b>",
+  "help": "Starts Identity Verification for a given verification program type.  Statuses are returned.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The Id of the customer for whom we are creating this verification."
+                    "helpTip": "The Id of the customer for whom we are creating this verification."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The verification program type for which we want to start the verification. Type: enum (IdentityVerificationProgram)"
+                    "helpTip": "The verification program type for which we want to start the verification. Type: enum (IdentityVerificationProgram)"
                   }
                 }
               ]

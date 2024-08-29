@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.campaignLifecycleGoal.configureCampaignLifecycleGoals",
   "title": "Customers Campaign Lifecycle Goal Configure Campaign Lifecycle Goals",
-  "help": "<h1>Customers Campaign Lifecycle Goal Configure Campaign Lifecycle Goals</h1> <b>The customers.campaignLifecycleGoal.configureCampaignLifecycleGoals operation.</b>",
+  "help": "Process the given campaign lifecycle configurations.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer performing the upload."
+                    "helpTip": "The ID of the customer performing the upload."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The operation to perform campaign lifecycle goal update. Type: object (CampaignLifecycleGoalOperation)"
+                    "helpTip": "The operation to perform campaign lifecycle goal update. Type: object (CampaignLifecycleGoalOperation)"
                   }
                 },
                 {

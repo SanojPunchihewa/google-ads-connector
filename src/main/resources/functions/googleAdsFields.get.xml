@@ -18,7 +18,7 @@
     <!-- Path Parameter List -->
     <parameter name="resourceName" description="Required. The resource name of the field to get."/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/{resourceName=googleAdsFields/*}"/>
             <property name="pathParameters" value="resourceName,"/>
         </class>

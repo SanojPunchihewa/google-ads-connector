@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.operations.cancel",
   "title": "Customers Operations Cancel",
-  "help": "<h1>Customers Operations Cancel</h1> <b>The customers.operations.cancel operation.</b>",
+  "help": "Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returnsgoogle.rpc.Code.UNIMPLEMENTED. Clients can useOperations.GetOperationor other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with anOperation.errorvalue with agoogle.rpc.Status.codeof 1, corresponding toCode.CANCELLED.",
   "elements": [
     {
       "type": "attributeGroup",

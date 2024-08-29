@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.uploadConversionAdjustments",
   "title": "Customers Upload Conversion Adjustments",
-  "help": "<h1>Customers Upload Conversion Adjustments</h1> <b>The customers.uploadConversionAdjustments operation.</b>",
+  "help": "Processes the given conversion adjustments.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,26 +56,18 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer performing the upload."
+                    "helpTip": "The ID of the customer performing the upload."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "conversionAdjustments",
-                    "displayName": "Conversion Adjustments",
+                    "name": "conversionAdjustments[]",
+                    "displayName": "Conversion Adjustments [ ]",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The conversion adjustments that are being uploaded. Type: object (ConversionAdjustment)"
+                    "helpTip": "The conversion adjustments that are being uploaded. Type: object (ConversionAdjustment)"
                   }
                 },
                 {
@@ -86,7 +78,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. If true, successful operations will be carried out and invalid operations will return errors. If false, all operations will be carried out in one transaction if and only if they are all valid. This should always be set to true. Seehttps:\/\/developers.google.com\/google-ads\/api\/docs\/best-practices\/partial-failuresfor more information about partial failure. Type: boolean"
+                    "helpTip": "If true, successful operations will be carried out and invalid operations will return errors. If false, all operations will be carried out in one transaction if and only if they are all valid. This should always be set to true. Seehttps:\/\/developers.google.com\/google-ads\/api\/docs\/best-practices\/partial-failuresfor more information about partial failure. Type: boolean"
                   }
                 },
                 {

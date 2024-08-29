@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.batchJobs.listResults",
   "title": "Customers Batch Jobs List Results",
-  "help": "<h1>Customers Batch Jobs List Results</h1> <b>The customers.batchJobs.listResults operation.</b>",
+  "help": "Returns the results of the batch job. The job must be done. Supports standard list paging.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,7 +56,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The resource name of the batch job whose results are being listed."
+                    "helpTip": "The resource name of the batch job whose results are being listed."
                   }
                 }
               ]

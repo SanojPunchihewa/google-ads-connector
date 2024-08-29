@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.productLinks.remove",
   "title": "Customers Product Links Remove",
-  "help": "<h1>Customers Product Links Remove</h1> <b>The customers.productLinks.remove operation.</b>",
+  "help": "Removes a product link.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer being modified."
+                    "helpTip": "The ID of the customer being modified."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. Remove operation: A resource name for the product link to remove is expected, in this format: Type: string"
+                    "helpTip": "Remove operation: A resource name for the product link to remove is expected, in this format: Type: string"
                   }
                 },
                 {

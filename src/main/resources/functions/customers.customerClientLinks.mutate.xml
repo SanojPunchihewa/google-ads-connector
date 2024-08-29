@@ -24,7 +24,7 @@
     <parameter name="validateOnly"
                description="If true, the request is validated but not executed. Only errors are returned, not results. Type: boolean"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}/customerClientLinks:mutate"/>
             <property name="pathParameters" value="customerId,"/>
         </class>
@@ -32,7 +32,7 @@
             <format>
                 <![CDATA[{
                                                                                         <#if (args.arg1)?has_content>
-                                    "operation": "${args.arg1}",                                </#if>
+                                    "operation": ${args.arg1},                                </#if>
                                                                                             <#if (args.arg2)?has_content>
                                     "validateOnly": "${args.arg2}"                                </#if>
                                                                                         }]]>

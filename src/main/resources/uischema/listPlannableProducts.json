@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "listPlannableProducts",
   "title": "List Plannable Products",
-  "help": "<h1>List Plannable Products</h1> <b>The listPlannableProducts operation.</b>",
+  "help": "Returns the list of per-location plannable YouTube ad formats with allowed targeting.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -46,7 +46,7 @@
           {
             "type": "attributeGroup",
             "value": {
-              "groupName": "Request Body",
+              "groupName": "Parameters",
               "elements": [
                 {
                   "type": "attribute",
@@ -56,7 +56,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the selected location for planning. To list the available plannable location IDs useReachPlanService.ListPlannableLocations. Type: string"
+                    "helpTip": "The ID of the selected location for planning. To list the available plannable location IDs useReachPlanService.ListPlannableLocations. Type: string"
                   }
                 }
               ]

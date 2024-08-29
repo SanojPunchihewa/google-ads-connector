@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.operations.list",
   "title": "Customers Operations List",
-  "help": "<h1>Customers Operations List</h1> <b>The customers.operations.list operation.</b>",
+  "help": "Lists operations that match the specified filter in the request. If the server doesn't support this method, it returnsUNIMPLEMENTED.",
   "elements": [
     {
       "type": "attributeGroup",

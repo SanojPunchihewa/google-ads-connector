@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.operations.get",
   "title": "Customers Operations Get",
-  "help": "<h1>Customers Operations Get</h1> <b>The customers.operations.get operation.</b>",
+  "help": "Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.",
   "elements": [
     {
       "type": "attributeGroup",

@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.uploadClickConversions",
   "title": "Customers Upload Click Conversions",
-  "help": "<h1>Customers Upload Click Conversions</h1> <b>The customers.uploadClickConversions operation.</b>",
+  "help": "Processes the given click conversions.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,26 +56,18 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer performing the upload."
+                    "helpTip": "The ID of the customer performing the upload."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "conversions",
-                    "displayName": "Conversions",
+                    "name": "conversions[]",
+                    "displayName": "Conversions [ ]",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The conversions that are being uploaded. Type: object (ClickConversion)"
+                    "helpTip": "The conversions that are being uploaded. Type: object (ClickConversion)"
                   }
                 },
                 {
@@ -86,7 +78,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. If true, successful operations will be carried out and invalid operations will return errors. If false, all operations will be carried out in one transaction if and only if they are all valid. This should always be set to true. Seehttps:\/\/developers.google.com\/google-ads\/api\/docs\/best-practices\/partial-failuresfor more information about partial failure. Type: boolean"
+                    "helpTip": "If true, successful operations will be carried out and invalid operations will return errors. If false, all operations will be carried out in one transaction if and only if they are all valid. This should always be set to true. Seehttps:\/\/developers.google.com\/google-ads\/api\/docs\/best-practices\/partial-failuresfor more information about partial failure. Type: boolean"
                   }
                 },
                 {

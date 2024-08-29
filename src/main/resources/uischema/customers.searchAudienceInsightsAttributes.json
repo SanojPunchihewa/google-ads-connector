@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.searchAudienceInsightsAttributes",
   "title": "Customers Search Audience Insights Attributes",
-  "help": "<h1>Customers Search Audience Insights Attributes</h1> <b>The customers.searchAudienceInsightsAttributes operation.</b>",
+  "help": "Searches for audience attributes that can be used to generate insights.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,26 +56,18 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer."
+                    "helpTip": "The ID of the customer."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "dimensions",
-                    "displayName": "Dimensions",
+                    "name": "dimensions[]",
+                    "displayName": "Dimensions [ ]",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The types of attributes to be returned. Type: enum (AudienceInsightsDimension)"
+                    "helpTip": "The types of attributes to be returned. Type: enum (AudienceInsightsDimension)"
                   }
                 },
                 {
@@ -86,7 +78,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. A free text query. If the requested dimensions include Attributes CATEGORY or KNOWLEDGE_GRAPH, then the attributes returned for those dimensions will match or be related to this string. For other dimensions, this field is ignored and all available attributes are returned. Type: string"
+                    "helpTip": "A free text query. If the requested dimensions include Attributes CATEGORY or KNOWLEDGE_GRAPH, then the attributes returned for those dimensions will match or be related to this string. For other dimensions, this field is ignored and all available attributes are returned. Type: string"
                   }
                 },
                 {
@@ -103,8 +95,8 @@
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "locationCountryFilters",
-                    "displayName": "Location Country Filters",
+                    "name": "locationCountryFilters[]",
+                    "displayName": "Location Country Filters [ ]",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",

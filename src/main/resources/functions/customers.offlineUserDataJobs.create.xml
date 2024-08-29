@@ -26,7 +26,7 @@
     <parameter name="enableMatchRateRangePreview"
                description="If true, match rate range for the offline user data job is calculated and made available in the resource. Type: boolean"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}/offlineUserDataJobs:create"/>
             <property name="pathParameters" value="customerId,"/>
         </class>
@@ -34,7 +34,7 @@
             <format>
                 <![CDATA[{
                                                                                         <#if (args.arg1)?has_content>
-                                    "job": "${args.arg1}",                                </#if>
+                                    "job": ${args.arg1},                                </#if>
                                                                                             <#if (args.arg2)?has_content>
                                     "validateOnly": "${args.arg2}",                                </#if>
                                                                                             <#if (args.arg3)?has_content>

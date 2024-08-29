@@ -23,7 +23,7 @@
     <parameter name="placeIds"
                description="The Google Maps Place IDs of hotels for which assets are requested. Seehttps://developers.google.com/places/web-service/place-idfor more information. Type: string"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}:suggestTravelAssets"/>
             <property name="pathParameters" value="customerId,"/>
         </class>

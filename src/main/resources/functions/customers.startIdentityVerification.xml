@@ -22,7 +22,7 @@
     <parameter name="verificationProgram"
                description="Required. The verification program type for which we want to start the verification. Type: enum (IdentityVerificationProgram)"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}:startIdentityVerification"/>
             <property name="pathParameters" value="customerId,"/>
         </class>

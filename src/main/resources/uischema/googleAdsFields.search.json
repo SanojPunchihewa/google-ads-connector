@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "googleAdsFields.search",
   "title": "Google Ads Fields Search",
-  "help": "<h1>Google Ads Fields Search</h1> <b>The googleAdsFields.search operation.</b>",
+  "help": "Returns all fields that match the search query.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -46,7 +46,7 @@
           {
             "type": "attributeGroup",
             "value": {
-              "groupName": "Request Body",
+              "groupName": "Parameters",
               "elements": [
                 {
                   "type": "attribute",
@@ -56,7 +56,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The query string. Type: string"
+                    "helpTip": "The query string. Type: string"
                   }
                 },
                 {

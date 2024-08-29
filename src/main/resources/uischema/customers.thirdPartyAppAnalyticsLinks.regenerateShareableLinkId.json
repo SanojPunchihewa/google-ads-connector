@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.thirdPartyAppAnalyticsLinks.regenerateShareableLinkId",
   "title": "Customers Third Party App Analytics Links Regenerate Shareable Link Id",
-  "help": "<h1>Customers Third Party App Analytics Links Regenerate Shareable Link Id</h1> <b>The customers.thirdPartyAppAnalyticsLinks.regenerateShareableLinkId operation.</b>",
+  "help": "Regenerate ThirdPartyAppAnalyticsLink.shareable_link_id that should be provided to the third party when setting up app analytics.",
   "elements": [
     {
       "type": "attributeGroup",

@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.experiments.listExperimentAsyncErrors",
   "title": "Customers Experiments List Experiment Async Errors",
-  "help": "<h1>Customers Experiments List Experiment Async Errors</h1> <b>The customers.experiments.listExperimentAsyncErrors operation.</b>",
+  "help": "Returns all errors that occurred during the last Experiment update (either scheduling or promotion). Supports standard list paging.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,7 +56,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The name of the experiment from which to retrieve the async errors."
+                    "helpTip": "The name of the experiment from which to retrieve the async errors."
                   }
                 }
               ]

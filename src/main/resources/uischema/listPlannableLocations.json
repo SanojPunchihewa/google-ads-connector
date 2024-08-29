@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "listPlannableLocations",
   "title": "List Plannable Locations",
-  "help": "<h1>List Plannable Locations</h1> <b>The listPlannableLocations operation.</b>",
+  "help": "Returns the list of plannable locations (for example, countries).",
   "elements": [
     {
       "type": "attributeGroup",

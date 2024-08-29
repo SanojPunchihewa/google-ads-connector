@@ -22,7 +22,7 @@
     <parameter name="mutateOperations"
                description="Required. The list of mutates being added. Type: object (MutateOperation)"/>
     <sequence>
-        <class name="org.wso2.carbon.googleAdNetworkconnector.RestURLBuilder">
+        <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/{resourceName=customers/*/batchJobs/*}:addOperations"/>
             <property name="pathParameters" value="resourceName,"/>
         </class>
@@ -32,7 +32,7 @@
                                                                                         <#if (args.arg1)?has_content>
                                     "sequenceToken": "${args.arg1}",                                </#if>
                                                                                             <#if (args.arg2)?has_content>
-                                    "mutateOperations": "${args.arg2}"                                </#if>
+                                    "mutateOperations": ${args.arg2}                                </#if>
                                                                                         }]]>
             </format>
             <args>

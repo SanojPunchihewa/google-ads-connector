@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.campaignBudgets.mutate",
   "title": "Customers Campaign Budgets Mutate",
-  "help": "<h1>Customers Campaign Budgets Mutate</h1> <b>The customers.campaignBudgets.mutate operation.</b>",
+  "help": "Creates, updates, or removes campaign budgets. Operation statuses are returned.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the customer whose campaign budgets are being modified."
+                    "helpTip": "The ID of the customer whose campaign budgets are being modified."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The list of operations to perform on individual campaign budgets. Type: object (CampaignBudgetOperation)"
+                    "helpTip": "The list of operations to perform on individual campaign budgets. Type: object (CampaignBudgetOperation)"
                   }
                 },
                 {

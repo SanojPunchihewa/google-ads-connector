@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "audienceInsights.listInsightsEligibleDates",
   "title": "Audience Insights List Insights Eligible Dates",
-  "help": "<h1>Audience Insights List Insights Eligible Dates</h1> <b>The audienceInsights.listInsightsEligibleDates operation.</b>",
+  "help": "Lists date ranges for which audience insights data can be requested.",
   "elements": [
     {
       "type": "attributeGroup",

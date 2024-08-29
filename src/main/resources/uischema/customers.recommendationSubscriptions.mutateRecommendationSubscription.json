@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.recommendationSubscriptions.mutateRecommendationSubscription",
   "title": "Customers Recommendation Subscriptions Mutate Recommendation Subscription",
-  "help": "<h1>Customers Recommendation Subscriptions Mutate Recommendation Subscription</h1> <b>The customers.recommendationSubscriptions.mutateRecommendationSubscription operation.</b>",
+  "help": "Mutates given subscription with corresponding apply parameters.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The ID of the subscribing customer."
+                    "helpTip": "The ID of the subscribing customer."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The list of create or update operations. Type: object (RecommendationSubscriptionOperation)"
+                    "helpTip": "The list of create or update operations. Type: object (RecommendationSubscriptionOperation)"
                   }
                 },
                 {

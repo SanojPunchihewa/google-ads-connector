@@ -2,7 +2,7 @@
   "connectorName": "googleAdNetwork",
   "operationName": "customers.billingSetups.mutate",
   "title": "Customers Billing Setups Mutate",
-  "help": "<h1>Customers Billing Setups Mutate</h1> <b>The customers.billingSetups.mutate operation.</b>",
+  "help": "Creates a billing setup, or cancels an existing billing setup.",
   "elements": [
     {
       "type": "attributeGroup",
@@ -56,17 +56,9 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. Id of the customer to apply the billing setup mutate operation to."
+                    "helpTip": "Id of the customer to apply the billing setup mutate operation to."
                   }
-                }
-              ]
-            }
-          },
-          {
-            "type": "attributeGroup",
-            "value": {
-              "groupName": "Request Body",
-              "elements": [
+                },
                 {
                   "type": "attribute",
                   "value": {
@@ -75,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Required. The operation to perform. Type: object (BillingSetupOperation)"
+                    "helpTip": "The operation to perform. Type: object (BillingSetupOperation)"
                   }
                 }
               ]
