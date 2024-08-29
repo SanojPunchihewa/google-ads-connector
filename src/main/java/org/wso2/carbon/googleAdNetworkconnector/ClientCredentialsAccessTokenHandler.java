@@ -1,9 +1,26 @@
+/*
+ *  Copyright (c) 2024, WSO2 LLC. (https://www.wso2.com).
+ *
+ *  WSO2 LLC. licenses this file to you under the Apache License,
+ *  Version 2.0 (the "License"); you may not use this file except
+ *  in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing,
+ *  software distributed under the License is distributed on an
+ *  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, either express or implied.  See the License for the
+ *  specific language governing permissions and limitations
+ *  under the License.
+ */
+
 package org.wso2.carbon.googleAdNetworkconnector;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -19,6 +36,7 @@ import org.apache.http.util.EntityUtils;
 import org.apache.synapse.MessageContext;
 import org.wso2.carbon.connector.core.AbstractConnector;
 import org.wso2.carbon.connector.core.ConnectException;
+import org.wso2.carbon.connector.core.util.ConnectorUtils;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -26,15 +44,20 @@ import java.net.HttpURLConnection;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class ClientCredentialsAccessTokenHandler extends AbstractConnector {
 
     private static final Log log = LogFactory.getLog(ClientCredentialsAccessTokenHandler.class);
     private static final JsonParser parser = new JsonParser();
-    private static final String ERROR_MESSAGE = "\"clientId\", \"clientSecret\", \"tokenEndpoint\" parameters or \"accessToken\" parameter must present.";
+    private static final String ERROR_MESSAGE = Constants.GENERAL_ERROR_MSG + "\"clientId\", \"clientSecret\"," +
+            " \"tokenEndpoint\", \"refreshToken\", \"developerToken\" parameters are mandatory.";
 
     @Override
     public void connect(MessageContext messageContext) throws ConnectException {
+
+        String connectionName = (String) ConnectorUtils.
+                lookupTemplateParamater(messageContext, Constants.CONNECTION_NAME);
 
         String base = (String) getParameter(messageContext, Constants.BASE);
         if (StringUtils.endsWith(base, "/")) {
@@ -42,63 +65,51 @@ public class ClientCredentialsAccessTokenHandler extends AbstractConnector {
         }
         messageContext.setProperty(Constants.PROPERTY_BASE, base);
 
-        String propertyAccessToken = (String) messageContext.getProperty(Constants.PROPERTY_ACCESS_TOKEN);
-        if (StringUtils.isEmpty(propertyAccessToken)) {
-            // If the access token is not available in the message context, retrieve from the token endpoint.
-//            String accessToken = (String) getParameter(messageContext, Constants.ACCESS_TOKEN);
-//            if (StringUtils.isEmpty(accessToken)) {
-                String clientId = (String) getParameter(messageContext, Constants.CLIENT_ID);
-                String clientSecret = (String) getParameter(messageContext, Constants.CLIENT_SECRET);
-                String tokenEndpoint = (String) getParameter(messageContext, Constants.TOKEN_ENDPOINT);
-                String refreshToken = (String) getParameter(messageContext, Constants.REFRESH_TOKEN);
-                String scope = (String) getParameter(messageContext, Constants.SCOPE);
-                // TODO verify developer token
+        String clientId = (String) getParameter(messageContext, Constants.CLIENT_ID);
+        String clientSecret = (String) getParameter(messageContext, Constants.CLIENT_SECRET);
+        String tokenEndpoint = (String) getParameter(messageContext, Constants.TOKEN_ENDPOINT);
+        String refreshToken = (String) getParameter(messageContext, Constants.REFRESH_TOKEN);
+        String developerToken = (String) getParameter(messageContext, Constants.DEVELOPER_TOKEN);
 
-                if (StringUtils.isEmpty(clientId) || StringUtils.isEmpty(clientSecret)
-                        || StringUtils.isEmpty(tokenEndpoint)) {
-//                    EHRConnectException exp = new EHRConnectException(ERROR_MESSAGE);
-//                    Utils.setErrorResponse(messageContext, exp, Constants.BAD_REQUEST_ERROR_CODE, ERROR_MESSAGE);
-//                    throw exp;
-                }
-
-                // to keep any other parameters need for the token generation
-                Map<String, String> payloadParametersMap = new HashMap<>();
-                payloadParametersMap.put("scope", scope);
-                payloadParametersMap.put("refresh_token", refreshToken);
-                payloadParametersMap.put("client_id", clientId);
-                payloadParametersMap.put("client_secret", clientSecret);
-
-                Token token = TokenManager.getToken(clientId, tokenEndpoint);
-                if (token == null || !token.isActive()) {
-                    if (token != null && !token.isActive()) {
-                        TokenManager.removeToken(clientId, getTokenKey(tokenEndpoint, payloadParametersMap));
-                    }
-                    if (log.isDebugEnabled()) {
-                        if (token == null) {
-                            log.debug("Token does not exists in token store.");
-                        } else {
-                            log.debug("Access token is inactive.");
-                        }
-                    }
-                    token = getAndAddNewToken(messageContext, clientId, clientSecret.toCharArray(), payloadParametersMap,
-                            tokenEndpoint);
-                }
-                String accessToken = token.getAccessToken();
-//            }
-            messageContext.setProperty(Constants.PROPERTY_ACCESS_TOKEN, accessToken);
+        if (StringUtils.isBlank(clientId) || StringUtils.isBlank(clientSecret)
+                || StringUtils.isBlank(tokenEndpoint) || StringUtils.isBlank(refreshToken) || StringUtils.isBlank(developerToken)){
+            Utils.setErrorPropertiesToMessage(messageContext, Constants.ErrorCodes.INVALID_CONFIG, ERROR_MESSAGE);
+            handleException(ERROR_MESSAGE, messageContext);
         }
+
+        Map<String, String> payloadParametersMap = new HashMap<>();
+        payloadParametersMap.put(Constants.OAuth2.REFRESH_TOKEN, refreshToken);
+        payloadParametersMap.put(Constants.OAuth2.CLIENT_ID, clientId);
+        payloadParametersMap.put(Constants.OAuth2.CLIENT_SECRET, clientSecret);
+
+        Token token = TokenManager.getToken(getTokenKey(connectionName, tokenEndpoint, developerToken, payloadParametersMap));
+        if (token == null || !token.isActive()) {
+            if (token != null && !token.isActive()) {
+                TokenManager.removeToken(getTokenKey(connectionName, tokenEndpoint, developerToken, payloadParametersMap));
+            }
+            if (log.isDebugEnabled()) {
+                if (token == null) {
+                    log.debug("Token does not exists in token store.");
+                } else {
+                    log.debug("Access token is inactive.");
+                }
+            }
+            token = getAndAddNewToken(messageContext, connectionName, developerToken, payloadParametersMap, tokenEndpoint);
+        }
+        String accessToken = token.getAccessToken();
+        messageContext.setProperty(Constants.PROPERTY_ACCESS_TOKEN, accessToken);
     }
 
     /**
      * Function to get new token.
      */
-    protected synchronized Token getAndAddNewToken(MessageContext messageContext, String clientId, char[] clientSecret,
-                                                   Map<String, String> payloadParametersMap, String tokenEndpoint) throws ConnectException {
+    protected synchronized Token getAndAddNewToken(MessageContext messageContext, String connectionName, String developerToken,
+                                                   Map<String, String> payloadParametersMap, String tokenEndpoint) {
 
-        Token token = TokenManager.getToken(clientId, getTokenKey(tokenEndpoint, payloadParametersMap));
+        Token token = TokenManager.getToken(getTokenKey(connectionName, tokenEndpoint, developerToken, payloadParametersMap));
         if (token == null || !token.isActive()) {
-            token = getAccessToken(messageContext, clientId, clientSecret, payloadParametersMap, tokenEndpoint);
-            TokenManager.addToken(clientId, getTokenKey(tokenEndpoint, payloadParametersMap), token);
+            token = getAccessToken(messageContext, payloadParametersMap, tokenEndpoint);
+            TokenManager.addToken(getTokenKey(connectionName, tokenEndpoint, developerToken, payloadParametersMap), token);
         }
         return token;
     }
@@ -106,21 +117,18 @@ public class ClientCredentialsAccessTokenHandler extends AbstractConnector {
     /**
      * Function to retrieve new client credential access token from the token endpoint.
      */
-    protected Token getAccessToken(MessageContext messageContext, String clientId, char[] clientSecret, Map<String, String> payloadParametersMap,
-                                   String tokenEndpoint) throws ConnectException {
+    protected Token getAccessToken(MessageContext messageContext, Map<String, String> payloadParametersMap,
+                                   String tokenEndpoint) {
 
         if (log.isDebugEnabled()) {
-            log.debug("Retrieving new system access token from token endpoint.");
+            log.debug("Retrieving new access token from token endpoint.");
         }
 
         long curTimeInMillis = System.currentTimeMillis();
         HttpPost postRequest = new HttpPost(tokenEndpoint);
 
-//        String authHeader = new String(new Base64().encode((clientId + ':' + String.valueOf(clientSecret)).getBytes()));
-//        postRequest.addHeader("Authorization", "Basic " + authHeader);
-
         ArrayList<NameValuePair> parameters = new ArrayList<>();
-        parameters.add(new BasicNameValuePair("grant_type", "refresh_token"));
+        parameters.add(new BasicNameValuePair(Constants.OAuth2.GRANT_TYPE, Constants.OAuth2.REFRESH_TOKEN));
 
         for (Map.Entry<String, String> entry : payloadParametersMap.entrySet()) {
             parameters.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
@@ -129,9 +137,9 @@ public class ClientCredentialsAccessTokenHandler extends AbstractConnector {
         try {
             postRequest.setEntity(new UrlEncodedFormEntity(parameters));
         } catch (UnsupportedEncodingException e) {
-            String errorMessage = "Error occurred while preparing access token request payload.";
-            log.error(errorMessage, e);
-//            throw new EHRConnectException(e, errorMessage);
+            String errorMessage = Constants.GENERAL_ERROR_MSG + "Error occurred while preparing access token request payload.";
+            Utils.setErrorPropertiesToMessage(messageContext, Constants.ErrorCodes.TOKEN_ERROR, errorMessage);
+            handleException(errorMessage, messageContext);
         }
 
         try (CloseableHttpClient httpClient = HttpClients.createDefault();
@@ -139,9 +147,9 @@ public class ClientCredentialsAccessTokenHandler extends AbstractConnector {
             HttpEntity responseEntity = response.getEntity();
 
             if (responseEntity == null) {
-                String errorMessage = "Failed to retrieve access token : No entity received.";
-                log.error(errorMessage);
-//                throw new EHRConnectException(errorMessage);
+                String errorMessage = Constants.GENERAL_ERROR_MSG + "Failed to retrieve access token : No entity received.";
+                Utils.setErrorPropertiesToMessage(messageContext, Constants.ErrorCodes.TOKEN_ERROR, errorMessage);
+                handleException(errorMessage, messageContext);
             }
 
             int responseStatus = response.getStatusLine().getStatusCode();
@@ -149,39 +157,25 @@ public class ClientCredentialsAccessTokenHandler extends AbstractConnector {
             if (responseStatus == HttpURLConnection.HTTP_OK) {
                 JsonElement jsonElement = parser.parse(respMessage);
                 JsonObject jsonObject = jsonElement.getAsJsonObject();
-                String accessToken = jsonObject.get("access_token").getAsString();
-                long expireIn = jsonObject.get("expires_in").getAsLong();
-
-                Token token = new Token(accessToken, curTimeInMillis, expireIn * 1000);
-                if (log.isDebugEnabled()) {
-                    log.debug(token);
-                }
-                return token;
-
+                String accessToken = jsonObject.get(Constants.OAuth2.ACCESS_TOKEN).getAsString();
+                long expireIn = jsonObject.get(Constants.OAuth2.EXPIRES_IN).getAsLong();
+                return new Token(accessToken, curTimeInMillis, expireIn * 1000);
             } else {
-                String errorMessage = "Error occurred while retrieving access token. Response: " + "[Status : "
-                        + responseStatus + " " + "Message: " + respMessage + "]";
-                log.error(errorMessage);
-//                EHRConnectException exp = new EHRConnectException(errorMessage);
-//                Utils.setErrorResponse(messageContext, exp, responseStatus, errorMessage);
-//                throw exp;
-
+                String errorMessage = Constants.GENERAL_ERROR_MSG + "Error occurred while retrieving access token. Response: "
+                        + "[Status : " + responseStatus + " " + "Message: " + respMessage + "]";
+                Utils.setErrorPropertiesToMessage(messageContext, Constants.ErrorCodes.TOKEN_ERROR, errorMessage);
+                handleException(errorMessage, messageContext);
             }
         } catch (IOException e) {
-            String errorMessage = "Error occurred while retrieving access token.";
-            log.error(errorMessage, e);
-//            throw new EHRConnectException(e, errorMessage);
+            String errorMessage = Constants.GENERAL_ERROR_MSG + "Error occurred while retrieving access token.";
+            Utils.setErrorPropertiesToMessage(messageContext, Constants.ErrorCodes.TOKEN_ERROR, errorMessage);
+            handleException(errorMessage, messageContext);
         }
-        // TODO
         return null;
     }
 
-    protected String getTokenKey(String tokenEp, Map<String, String> params) {
+    private String getTokenKey(String connection, String tokenEp, String developerToken, Map<String, String> params) {
 
-        StringBuilder sb = new StringBuilder(tokenEp);
-        for (String val : params.values()) {
-            sb.append("_").append(val);
-        }
-        return sb.toString();
+        return connection + "_" + Objects.hash(tokenEp, developerToken, params);
     }
 }

@@ -1,15 +1,21 @@
 /*
- * Copyright (c) 2022, WSO2 LLC. (http://www.wso2.com). All Rights Reserved.
+ *  Copyright (c) 2024, WSO2 LLC. (https://www.wso2.com).
  *
- * This software is the property of WSO2 LLC. and its suppliers, if any.
- * Dissemination of any information or reproduction of any material contained
- * herein is strictly forbidden, unless permitted by WSO2 in accordance with
- * the WSO2 Software License available at: https://wso2.com/licenses/eula/3.2
- * For specific language governing the permissions and limitations under
- * this license, please see the license as well as any agreement you’ve
- * entered into with WSO2 governing the purchase of this software and any
- * associated services.
+ *  WSO2 LLC. licenses this file to you under the Apache License,
+ *  Version 2.0 (the "License"); you may not use this file except
+ *  in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing,
+ *  software distributed under the License is distributed on an
+ *  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, either express or implied.  See the License for the
+ *  specific language governing permissions and limitations
+ *  under the License.
  */
+
 package org.wso2.carbon.googleAdNetworkconnector;
 
 import org.apache.commons.logging.Log;
@@ -19,6 +25,7 @@ import org.apache.commons.logging.LogFactory;
  * The TokenManager holds and manages the tokens.
  */
 public class TokenManager {
+
     private static final Log log = LogFactory.getLog(TokenManager.class);
     private static final TokenStore TOKEN_STORE = new InMemoryTokenStore();
 
@@ -29,28 +36,25 @@ public class TokenManager {
     /**
      * Function to add access token for given client ID and token endpoint.
      */
-    public static void addToken(String clientId, String resourceKey, Token token) {
+    public static void addToken(String resourceKey, Token token) {
 
-        String tokenKey = clientId + Constants.TOKEN_KEY_SEPARATOR + resourceKey;
-        TOKEN_STORE.add(tokenKey, token);
+        TOKEN_STORE.add(resourceKey, token);
     }
 
     /**
      * Function to get access token for given client ID and token endpoint.
      */
-    public static Token getToken(String clientId, String resourceKey) {
+    public static Token getToken(String resourceKey) {
 
-        String tokenKey = clientId + Constants.TOKEN_KEY_SEPARATOR + resourceKey;
-        return TOKEN_STORE.get(tokenKey);
+        return TOKEN_STORE.get(resourceKey);
     }
 
     /**
      * Function to remove token from the token cache.
      */
-    public static void removeToken(String clientId, String resourceKey) {
+    public static void removeToken(String resourceKey) {
 
-        String tokenKey = clientId + Constants.TOKEN_KEY_SEPARATOR + resourceKey;
-        TOKEN_STORE.remove(tokenKey);
+        TOKEN_STORE.remove(resourceKey);
     }
 
     /**

@@ -18,37 +18,20 @@
 
 package org.wso2.carbon.googleAdNetworkconnector;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+import org.apache.synapse.MessageContext;
 
-/**
- * In-Memory Token Store.
- */
-public class InMemoryTokenStore implements TokenStore {
+public class Utils {
 
-    private final Map<String, Token> TOKEN_MAP = new ConcurrentHashMap<>(2);
+    /**
+     * Sets the error code and error message in message context.
+     *
+     * @param messageContext Message Context
+     * @param errorCode      Error Code
+     * @param errorMessage   Error Message
+     */
+    public static void setErrorPropertiesToMessage(MessageContext messageContext, String errorCode, String errorMessage) {
 
-    @Override
-    public Token get(String tokenKey) {
-
-        return TOKEN_MAP.get(tokenKey);
-    }
-
-    @Override
-    public void add(String tokenKey, Token token) {
-
-        TOKEN_MAP.put(tokenKey, token);
-    }
-
-    @Override
-    public Token remove(String tokenKey) {
-
-        return TOKEN_MAP.remove(tokenKey);
-    }
-
-    @Override
-    public void clean() {
-
-        TOKEN_MAP.clear();
+        messageContext.setProperty(Constants.PROPERTY_ERROR_CODE, errorCode);
+        messageContext.setProperty(Constants.PROPERTY_ERROR_MESSAGE, errorMessage);
     }
 }

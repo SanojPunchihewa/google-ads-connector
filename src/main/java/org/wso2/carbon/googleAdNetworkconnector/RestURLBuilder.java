@@ -1,3 +1,21 @@
+/*
+ *  Copyright (c) 2024, WSO2 LLC. (https://www.wso2.com).
+ *
+ *  WSO2 LLC. licenses this file to you under the Apache License,
+ *  Version 2.0 (the "License"); you may not use this file except
+ *  in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing,
+ *  software distributed under the License is distributed on an
+ *  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, either express or implied.  See the License for the
+ *  specific language governing permissions and limitations
+ *  under the License.
+ */
+
 package org.wso2.carbon.googleAdNetworkconnector;
 
 import org.apache.commons.lang3.StringUtils;
@@ -7,15 +25,12 @@ import org.wso2.carbon.connector.core.ConnectException;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.util.Map;
 
 public class RestURLBuilder extends AbstractConnector {
 
     private static final String encoding = "UTF-8";
     private static final String URL_PATH = "uri.var.urlPath";
     private static final String URL_QUERY = "uri.var.urlQuery";
-    private static final int ERROR_CODE = 500;
-    private static final String ERROR_MESSAGE = "Error occurred while constructing the URL query.";
     private String operationPath = "";
     private String pathParameters = "";
     private String queryParameters = "";
@@ -52,7 +67,6 @@ public class RestURLBuilder extends AbstractConnector {
 
     @Override
     public void connect(MessageContext messageContext) throws ConnectException {
-        Map<String, String> paramNameMap = (Map<String, String>) messageContext.getProperty("_OH_INTERNAL_PARAM_NAME_MAP_");
 
         try {
             String urlPath = getOperationPath();
@@ -60,12 +74,13 @@ public class RestURLBuilder extends AbstractConnector {
                 String[] pathParameterList = getPathParameters().split(",");
                 for (String pathParameter : pathParameterList) {
                     String paramValue = (String) getParameter(messageContext, pathParameter);
-                    String name = paramNameMap.get(pathParameter);
                     if (StringUtils.isNotEmpty(paramValue)) {
                         String encodedParamValue = URLEncoder.encode(paramValue, encoding);
-                        urlPath = urlPath.replace("{" + name + "}", encodedParamValue);
+                        urlPath = urlPath.replace("{" + pathParameter + "}", encodedParamValue);
                     } else {
-//                        throw new EHRConnectException("The path parameter \"" + pathParameter + "\" is missing.");
+                        String errorMessage = Constants.GENERAL_ERROR_MSG + "Mapping parameter '" + pathParameter + "' is not set.";
+                        Utils.setErrorPropertiesToMessage(messageContext, Constants.ErrorCodes.INVALID_CONFIG, errorMessage);
+                        handleException(errorMessage, messageContext);
                     }
                 }
             }
@@ -77,8 +92,7 @@ public class RestURLBuilder extends AbstractConnector {
                     String paramValue = (String) getParameter(messageContext, queryParameter);
                     if (StringUtils.isNotEmpty(paramValue)) {
                         String encodedParamValue = URLEncoder.encode(paramValue, encoding);
-                        String name = paramNameMap.get(queryParameter);
-                        urlQueryBuilder.append(name).append('=').append(encodedParamValue).append('&');
+                        urlQueryBuilder.append(queryParameter).append('=').append(encodedParamValue).append('&');
                     }
                 }
             }
@@ -92,7 +106,9 @@ public class RestURLBuilder extends AbstractConnector {
             messageContext.setProperty(URL_QUERY, urlQuery);
 
         } catch (UnsupportedEncodingException e) {
-//            Utils.handleError(messageContext, e, ERROR_CODE, ERROR_MESSAGE);
+            String errorMessage = Constants.GENERAL_ERROR_MSG + "Error occurred while constructing the URL query.";
+            Utils.setErrorPropertiesToMessage(messageContext, Constants.ErrorCodes.GENERAL_ERROR, errorMessage);
+            handleException(errorMessage, messageContext);
         }
     }
 }
