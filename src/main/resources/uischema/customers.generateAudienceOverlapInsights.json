@@ -84,8 +84,8 @@
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "dimensions[]",
-                    "displayName": "Dimensions [ ]",
+                    "name": "dimensions",
+                    "displayName": "Dimensions",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",

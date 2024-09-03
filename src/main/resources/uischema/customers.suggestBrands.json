@@ -62,8 +62,8 @@
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "selectedBrands[]",
-                    "displayName": "Selected Brands [ ]",
+                    "name": "selectedBrands",
+                    "displayName": "Selected Brands",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",

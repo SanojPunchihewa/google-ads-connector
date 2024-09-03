@@ -55,7 +55,7 @@
                     "displayName": "Customer Id",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
-                    "required": "false",
+                    "required": "true",
                     "helpTip": "The ID of the customer."
                   }
                 },

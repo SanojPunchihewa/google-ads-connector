@@ -62,8 +62,8 @@
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "keywords[]",
-                    "displayName": "Keywords [ ]",
+                    "name": "keywords",
+                    "displayName": "Keywords",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
@@ -73,8 +73,8 @@
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "adGroups[]",
-                    "displayName": "Ad Groups [ ]",
+                    "name": "adGroups",
+                    "displayName": "Ad Groups",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",

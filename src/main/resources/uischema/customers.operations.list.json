@@ -55,8 +55,41 @@
                     "displayName": "Name",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
-                    "required": "false",
+                    "required": "true",
                     "helpTip": "The name of the operation's parent resource."
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "filter",
+                    "displayName": "Filter",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "The standard list filter."
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "pageSize",
+                    "displayName": "Page Size",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "The standard list page size."
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "pageToken",
+                    "displayName": "Page Token",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "The standard list page token."
                   }
                 }
               ]

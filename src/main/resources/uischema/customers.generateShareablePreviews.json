@@ -62,8 +62,8 @@
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "shareablePreviews[]",
-                    "displayName": "Shareable Previews [ ]",
+                    "name": "shareablePreviews",
+                    "displayName": "Shareable Previews",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",

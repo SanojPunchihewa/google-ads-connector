@@ -55,7 +55,7 @@
                     "displayName": "Name",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
-                    "required": "false",
+                    "required": "true",
                     "helpTip": "The name of the operation resource."
                   }
                 }

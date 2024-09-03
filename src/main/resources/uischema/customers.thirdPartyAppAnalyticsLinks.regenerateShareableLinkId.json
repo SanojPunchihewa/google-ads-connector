@@ -55,7 +55,7 @@
                     "displayName": "Resource Name",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
-                    "required": "false",
+                    "required": "true",
                     "helpTip": "Resource name of the third party app analytics link."
                   }
                 }

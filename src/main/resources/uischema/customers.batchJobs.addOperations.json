@@ -73,7 +73,7 @@
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "mutateoperations",
+                    "name": "mutateOperations",
                     "displayName": "Mutate Operations",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",

@@ -95,8 +95,8 @@
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "plannedProducts[]",
-                    "displayName": "Planned Products [ ]",
+                    "name": "plannedProducts",
+                    "displayName": "Planned Products",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",

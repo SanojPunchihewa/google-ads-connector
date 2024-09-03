@@ -62,8 +62,8 @@
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "conversionAdjustments[]",
-                    "displayName": "Conversion Adjustments [ ]",
+                    "name": "conversionAdjustments",
+                    "displayName": "Conversion Adjustments",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",

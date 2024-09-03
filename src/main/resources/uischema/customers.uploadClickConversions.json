@@ -62,8 +62,8 @@
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "conversions[]",
-                    "displayName": "Conversions [ ]",
+                    "name": "conversions",
+                    "displayName": "Conversions",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",

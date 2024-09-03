@@ -62,8 +62,8 @@
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "assetsWithFieldType[]",
-                    "displayName": "Assets With Field Type [ ]",
+                    "name": "assetsWithFieldType",
+                    "displayName": "Assets With Field Type",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",

@@ -17,10 +17,15 @@
 <template xmlns="http://ws.apache.org/ns/synapse" name="customers.operations.list">
     <!-- Path Parameter List -->
     <parameter name="name" description="The name of the operation&apos;s parent resource."/>
+    <!-- Query Parameter List -->
+    <parameter name="filter" description="The standard list filter."/>
+    <parameter name="pageSize" description="The standard list page size."/>
+    <parameter name="pageToken" description="The standard list page token."/>
     <sequence>
         <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/{name=customers/*/operations}"/>
             <property name="pathParameters" value="name,"/>
+            <property name="queryParameters" value="filter,pageSize,pageToken,"/>
         </class>
         <property name="messageType" value="application/json" scope="axis2"/>
         <property name="ContentType" value="application/json" scope="axis2"/>

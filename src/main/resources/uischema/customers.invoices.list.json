@@ -58,6 +58,39 @@
                     "required": "true",
                     "helpTip": "The ID of the customer to fetch invoices for."
                   }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "billingSetup",
+                    "displayName": "Billing Setup",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "The billing setup resource name of the requested invoices."
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "issueYear",
+                    "displayName": "Issue Year",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "The issue year to retrieve invoices, in yyyy format. Only invoices issued in 2019 or later can be retrieved."
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "issueMonth",
+                    "displayName": "Issue Month",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "The issue month to retrieve invoices."
+                  }
                 }
               ]
             }

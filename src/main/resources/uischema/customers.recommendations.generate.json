@@ -62,8 +62,8 @@
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "recommendationTypes[]",
-                    "displayName": "Recommendation Types [ ]",
+                    "name": "recommendationTypes",
+                    "displayName": "Recommendation Types",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
@@ -84,8 +84,8 @@
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "adGroupInfo[]",
-                    "displayName": "Ad Group Info [ ]",
+                    "name": "adGroupInfo",
+                    "displayName": "Ad Group Info",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",

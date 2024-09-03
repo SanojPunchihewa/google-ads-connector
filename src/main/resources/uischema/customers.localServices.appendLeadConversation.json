@@ -62,8 +62,8 @@
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "conversations[]",
-                    "displayName": "Conversations [ ]",
+                    "name": "conversations",
+                    "displayName": "Conversations",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",

@@ -55,15 +55,15 @@
                     "displayName": "Customer Id",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
-                    "required": "false",
+                    "required": "true",
                     "helpTip": "The ID of the customer with the recommendation."
                   }
                 },
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "keywords[]",
-                    "displayName": "Keywords [ ]",
+                    "name": "keywords",
+                    "displayName": "Keywords",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",
@@ -84,8 +84,8 @@
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "geoTargetConstants[]",
-                    "displayName": "Geo Target Constants [ ]",
+                    "name": "geoTargetConstants",
+                    "displayName": "Geo Target Constants",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",

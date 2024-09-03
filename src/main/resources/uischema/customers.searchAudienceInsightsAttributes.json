@@ -62,8 +62,8 @@
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "dimensions[]",
-                    "displayName": "Dimensions [ ]",
+                    "name": "dimensions",
+                    "displayName": "Dimensions",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
@@ -95,8 +95,8 @@
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "locationCountryFilters[]",
-                    "displayName": "Location Country Filters [ ]",
+                    "name": "locationCountryFilters",
+                    "displayName": "Location Country Filters",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",

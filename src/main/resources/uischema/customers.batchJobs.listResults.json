@@ -58,6 +58,39 @@
                     "required": "true",
                     "helpTip": "The resource name of the batch job whose results are being listed."
                   }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "pageToken",
+                    "displayName": "Page Token",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "Token of the page to retrieve. If not specified, the first page of results will be returned. Use the value obtained fromnextPageTokenin the previous response in order to request the next page of results."
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "pageSize",
+                    "displayName": "Page Size",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "Number of elements to retrieve in a single page. When a page request is too large, the server may decide to further limit the number of returned resources."
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "responseContentType",
+                    "displayName": "Response Content Type",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "The response content type setting. Determines whether the mutable resource or just the resource name should be returned."
+                  }
                 }
               ]
             }

@@ -73,8 +73,8 @@
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "placeIds[]",
-                    "displayName": "Place Ids [ ]",
+                    "name": "placeIds",
+                    "displayName": "Place Ids",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",

@@ -62,8 +62,8 @@
                 {
                   "type": "attribute",
                   "value": {
-                    "name": "campaignBudgetMappings[]",
-                    "displayName": "Campaign Budget Mappings [ ]",
+                    "name": "campaignBudgetMappings",
+                    "displayName": "Campaign Budget Mappings",
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",

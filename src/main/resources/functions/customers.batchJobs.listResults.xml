@@ -18,10 +18,18 @@
     <!-- Path Parameter List -->
     <parameter name="resourceName"
                description="Required. The resource name of the batch job whose results are being listed."/>
+    <!-- Query Parameter List -->
+    <parameter name="pageToken"
+               description="Token of the page to retrieve. If not specified, the first page of results will be returned. Use the value obtained fromnextPageTokenin the previous response in order to request the next page of results."/>
+    <parameter name="pageSize"
+               description="Number of elements to retrieve in a single page. When a page request is too large, the server may decide to further limit the number of returned resources."/>
+    <parameter name="responseContentType"
+               description="The response content type setting. Determines whether the mutable resource or just the resource name should be returned."/>
     <sequence>
         <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/{resourceName=customers/*/batchJobs/*}:listResults"/>
             <property name="pathParameters" value="resourceName,"/>
+            <property name="queryParameters" value="pageToken,pageSize,responseContentType,"/>
         </class>
         <property name="messageType" value="application/json" scope="axis2"/>
         <property name="ContentType" value="application/json" scope="axis2"/>
