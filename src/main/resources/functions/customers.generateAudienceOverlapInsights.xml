@@ -23,7 +23,7 @@
     <parameter name="primaryAttribute"
                description="Required. The audience attribute that should be intersected with all other eligible audiences. This must be an Affinity or In-Market UserInterest, an AgeRange or a Gender. Type: object (AudienceInsightsAttribute)"/>
     <parameter name="dimensions"
-               description="Required. The types of attributes of which to calculate the overlap with the primaryAttribute. The values must be a subset of AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, AGE_RANGE and GENDER. Type: enum (AudienceInsightsDimension)"/>
+               description="Required. The list of types of attributes of which to calculate the overlap with the primaryAttribute. The values must be a subset of AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, AGE_RANGE and GENDER. Type: enum (AudienceInsightsDimension)"/>
     <parameter name="customerInsightsGroup"
                description="The name of the customer being planned for. This is a user-defined value. Type: string"/>
     <sequence>
@@ -39,7 +39,7 @@
                                                                                             <#if (args.arg2)?has_content>
                                     "primaryAttribute": ${args.arg2},                                </#if>
                                                                                             <#if (args.arg3)?has_content>
-                                    "dimensions": "${args.arg3}",                                </#if>
+                                    "dimensions": ${args.arg3},                                </#if>
                                                                                             <#if (args.arg4)?has_content>
                                     "customerInsightsGroup": "${args.arg4}"                                </#if>
                                                                                         }]]>

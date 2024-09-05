@@ -100,7 +100,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "The products to be forecast. The max number of allowed planned products is 15. Type: object (PlannedProduct)"
+                    "helpTip": "The list of products to be forecast. The max number of allowed planned products is 15. Type: object (PlannedProduct)"
                   }
                 },
                 {

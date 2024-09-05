@@ -67,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",
-                    "helpTip": "The resource names of the location to target. Maximum is 10. An empty list MAY be used to specify all targeting geos. Type: string"
+                    "helpTip": "The list of resource names of the location to target. Maximum is 10. An empty list MAY be used to specify all targeting geos. Type: string"
                   }
                 },
                 {
@@ -122,7 +122,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",
-                    "helpTip": "The keyword annotations to include in response. Type: enum (KeywordPlanKeywordAnnotation)"
+                    "helpTip": "The list of keyword annotations to include in response. Type: enum (KeywordPlanKeywordAnnotation)"
                   }
                 },
                 {

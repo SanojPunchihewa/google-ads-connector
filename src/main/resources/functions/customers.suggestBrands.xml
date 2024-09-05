@@ -20,7 +20,7 @@
                description="Required. The ID of the customer onto which to apply the brand suggestion operation."/>
     <!-- Request Body Parameter List -->
     <parameter name="selectedBrands"
-               description="Optional. Ids of the brands already selected by advertisers. They will be excluded in response. These are expected to be brand ids not brand names. Type: string"/>
+               description="Optional. The list of Ids of the brands already selected by advertisers. They will be excluded in response. These are expected to be brand ids not brand names. Type: string"/>
     <parameter name="brandPrefix" description="Required. The prefix of a brand name. Type: string"/>
     <sequence>
         <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
@@ -31,7 +31,7 @@
             <format>
                 <![CDATA[{
                                                                                         <#if (args.arg1)?has_content>
-                                    "selectedBrands": "${args.arg1}",                                </#if>
+                                    "selectedBrands": ${args.arg1},                                </#if>
                                                                                             <#if (args.arg2)?has_content>
                                     "brandPrefix": "${args.arg2}"                                </#if>
                                                                                         }]]>

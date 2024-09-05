@@ -78,7 +78,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",
-                    "helpTip": "Optional. The baseline audience. The default, if unspecified, is all people in the same country as the audience of interest. Type: object (InsightsAudience)"
+                    "helpTip": "The baseline audience. The default, if unspecified, is all people in the same country as the audience of interest. Type: object (InsightsAudience)"
                   }
                 },
                 {
@@ -89,7 +89,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",
-                    "helpTip": "Optional. The one-month range of historical data to use for insights, in the format \"yyyy-mm\". If unset, insights will be returned for the last thirty days of data. Type: string"
+                    "helpTip": "The one-month range of historical data to use for insights, in the format \"yyyy-mm\". If unset, insights will be returned for the last thirty days of data. Type: string"
                   }
                 },
                 {
@@ -100,7 +100,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",
-                    "helpTip": "Optional. The name of the customer being planned for. This is a user-defined value. Type: string"
+                    "helpTip": "The name of the customer being planned for. This is a user-defined value. Type: string"
                   }
                 }
               ]

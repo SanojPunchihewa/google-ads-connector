@@ -100,7 +100,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "The audience dimensions for which composition insights should be returned. Type: enum (AudienceInsightsDimension)"
+                    "helpTip": "The list of audience dimensions for which composition insights should be returned. Type: enum (AudienceInsightsDimension)"
                   }
                 },
                 {

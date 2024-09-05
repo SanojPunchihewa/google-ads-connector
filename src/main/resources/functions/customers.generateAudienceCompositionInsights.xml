@@ -25,7 +25,7 @@
     <parameter name="dataMonth"
                description="The one-month range of historical data to use for insights, in the format &quot;yyyy-mm&quot;. If unset, insights will be returned for the last thirty days of data. Type: string"/>
     <parameter name="dimensions"
-               description="Required. The audience dimensions for which composition insights should be returned. Type: enum (AudienceInsightsDimension)"/>
+               description="Required. The list of audience dimensions for which composition insights should be returned. Type: enum (AudienceInsightsDimension)"/>
     <parameter name="customerInsightsGroup"
                description="The name of the customer being planned for. This is a user-defined value. Type: string"/>
     <sequence>
@@ -43,7 +43,7 @@
                                                                                             <#if (args.arg3)?has_content>
                                     "dataMonth": "${args.arg3}",                                </#if>
                                                                                             <#if (args.arg4)?has_content>
-                                    "dimensions": "${args.arg4}",                                </#if>
+                                    "dimensions": ${args.arg4},                                </#if>
                                                                                             <#if (args.arg5)?has_content>
                                     "customerInsightsGroup": "${args.arg5}"                                </#if>
                                                                                         }]]>

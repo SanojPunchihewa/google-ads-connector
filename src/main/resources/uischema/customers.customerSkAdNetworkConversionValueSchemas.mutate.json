@@ -89,7 +89,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",
-                    "helpTip": "Optional. If true, enables returning warnings. Warnings return error messages and error codes without blocking the execution of the mutate operation. Type: boolean"
+                    "helpTip": "If true, enables returning warnings. Warnings return error messages and error codes without blocking the execution of the mutate operation. Type: boolean"
                   }
                 }
               ]

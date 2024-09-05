@@ -89,7 +89,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",
-                    "helpTip": "Optional. Current AdGroup Information. Supports information from a single AdGroup. This field is optional for the following recommendationTypes: KEYWORD Type: object (AdGroupInfo)"
+                    "helpTip": "List of AdGroup Information. Supports information from a single AdGroup. This field is optional for the following recommendationTypes: KEYWORD Type: object (AdGroupInfo)"
                   }
                 },
                 {
@@ -100,7 +100,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",
-                    "helpTip": "Optional. Number of sitelinks on the campaign. This field is necessary for the following recommendationTypes: SITELINK_ASSET Type: integer"
+                    "helpTip": "Number of sitelinks on the campaign. This field is necessary for the following recommendationTypes: SITELINK_ASSET Type: integer"
                   }
                 },
                 {
@@ -111,7 +111,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",
-                    "helpTip": "Optional. Current conversion tracking status. This field is necessary for the following recommendationTypes: MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, MAXIMIZE_CONVERSION_VALUE_OPT_IN, SET_TARGET_CPA, SET_TARGET_ROAS, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN Type: enum (ConversionTrackingStatus)"
+                    "helpTip": "Current conversion tracking status. This field is necessary for the following recommendationTypes: MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, MAXIMIZE_CONVERSION_VALUE_OPT_IN, SET_TARGET_CPA, SET_TARGET_ROAS, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN Type: enum (ConversionTrackingStatus)"
                   }
                 },
                 {
@@ -122,7 +122,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",
-                    "helpTip": "Optional. Current bidding information of the campaign. This field is necessary for the following recommendationTypes: MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, MAXIMIZE_CONVERSION_VALUE_OPT_IN, SET_TARGET_CPA, SET_TARGET_ROAS, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN Type: object (BiddingInfo)"
+                    "helpTip": "Current bidding information of the campaign. This field is necessary for the following recommendationTypes: MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, MAXIMIZE_CONVERSION_VALUE_OPT_IN, SET_TARGET_CPA, SET_TARGET_ROAS, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN Type: object (BiddingInfo)"
                   }
                 },
                 {
@@ -133,7 +133,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",
-                    "helpTip": "Optional. Seed information for Keywords. This field is necessary for the following recommendationTypes: KEYWORD Type: object (SeedInfo)"
+                    "helpTip": "Seed information for Keywords. This field is necessary for the following recommendationTypes: KEYWORD Type: object (SeedInfo)"
                   }
                 }
               ]

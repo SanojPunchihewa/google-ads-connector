@@ -78,7 +78,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",
-                    "helpTip": "The Google Maps Place IDs of hotels for which assets are requested. Seehttps:\/\/developers.google.com\/places\/web-service\/place-idfor more information. Type: string"
+                    "helpTip": "The list of Google Maps Place IDs of hotels for which assets are requested. Seehttps:\/\/developers.google.com\/places\/web-service\/place-idfor more information. Type: string"
                   }
                 }
               ]

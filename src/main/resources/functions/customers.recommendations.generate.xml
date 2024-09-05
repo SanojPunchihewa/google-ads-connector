@@ -23,7 +23,7 @@
     <parameter name="advertisingChannelType"
                description="Required. Advertising channel type of the campaign. The following advertisingChannelTypes are supported for recommendation generation: PERFORMANCE_MAX and SEARCH Type: enum (AdvertisingChannelType)"/>
     <parameter name="adGroupInfo"
-               description="Optional. Current AdGroup Information. Supports information from a single AdGroup. This field is optional for the following recommendationTypes: KEYWORD Type: object (AdGroupInfo)"/>
+               description="Optional. List of AdGroup Information. Supports information from a single AdGroup. This field is optional for the following recommendationTypes: KEYWORD Type: object (AdGroupInfo)"/>
     <parameter name="campaignSitelinkCount"
                description="Optional. Number of sitelinks on the campaign. This field is necessary for the following recommendationTypes: SITELINK_ASSET Type: integer"/>
     <parameter name="conversionTrackingStatus"
@@ -41,7 +41,7 @@
             <format>
                 <![CDATA[{
                                                                                         <#if (args.arg1)?has_content>
-                                    "recommendationTypes": "${args.arg1}",                                </#if>
+                                    "recommendationTypes": ${args.arg1},                                </#if>
                                                                                             <#if (args.arg2)?has_content>
                                     "advertisingChannelType": "${args.arg2}",                                </#if>
                                                                                             <#if (args.arg3)?has_content>

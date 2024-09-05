@@ -67,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "The conversion adjustments that are being uploaded. Type: object (ConversionAdjustment)"
+                    "helpTip": "The list of conversion adjustments that are being uploaded. Type: object (ConversionAdjustment)"
                   }
                 },
                 {
@@ -100,7 +100,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",
-                    "helpTip": "Optional. Optional input to set job ID. Must be a non-negative number that is less than 2^31 if provided. If this field is not provided, the API will generate a job ID in the range [2^31, (2^63)-1]. The API will return the value for this request in thejobIdfield of theUploadConversionAdjustmentsResponse. Type: integer"
+                    "helpTip": "Optional input to set job ID. Must be a non-negative number that is less than 2^31 if provided. If this field is not provided, the API will generate a job ID in the range [2^31, (2^63)-1]. The API will return the value for this request in thejobIdfield of theUploadConversionAdjustmentsResponse. Type: integer"
                   }
                 }
               ]

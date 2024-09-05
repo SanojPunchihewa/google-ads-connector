@@ -89,7 +89,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "The types of attributes of which to calculate the overlap with the primaryAttribute. The values must be a subset of AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, AGE_RANGE and GENDER. Type: enum (AudienceInsightsDimension)"
+                    "helpTip": "The list of types of attributes of which to calculate the overlap with the primaryAttribute. The values must be a subset of AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, AGE_RANGE and GENDER. Type: enum (AudienceInsightsDimension)"
                   }
                 },
                 {

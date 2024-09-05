@@ -41,11 +41,11 @@
             <format>
                 <![CDATA[{
                                                                                         <#if (args.arg1)?has_content>
-                                    "keywords": "${args.arg1}",                                </#if>
+                                    "keywords": ${args.arg1},                                </#if>
                                                                                             <#if (args.arg2)?has_content>
                                     "includeAdultKeywords": "${args.arg2}",                                </#if>
                                                                                             <#if (args.arg3)?has_content>
-                                    "geoTargetConstants": "${args.arg3}",                                </#if>
+                                    "geoTargetConstants": ${args.arg3},                                </#if>
                                                                                             <#if (args.arg4)?has_content>
                                     "keywordPlanNetwork": "${args.arg4}",                                </#if>
                                                                                             <#if (args.arg5)?has_content>

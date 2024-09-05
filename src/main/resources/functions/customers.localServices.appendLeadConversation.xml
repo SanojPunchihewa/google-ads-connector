@@ -20,7 +20,7 @@
                description="Required. The Id of the customer which owns the leads onto which the conversations will be appended."/>
     <!-- Request Body Parameter List -->
     <parameter name="conversations"
-               description="Required. Conversations that are being appended. Type: object (Conversation)"/>
+               description="Required. The list of conversations that are being appended. Type: object (Conversation)"/>
     <sequence>
         <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}/localServices:appendLeadConversation"/>

@@ -19,13 +19,13 @@
     <parameter name="customerId" description="Required. The ID of the customer."/>
     <!-- Request Body Parameter List -->
     <parameter name="dimensions"
-               description="Required. The types of attributes to be returned. Type: enum (AudienceInsightsDimension)"/>
+               description="Required. The list of types of attributes to be returned. Type: enum (AudienceInsightsDimension)"/>
     <parameter name="queryText"
                description="Required. A free text query. If the requested dimensions include Attributes CATEGORY or KNOWLEDGE_GRAPH, then the attributes returned for those dimensions will match or be related to this string. For other dimensions, this field is ignored and all available attributes are returned. Type: string"/>
     <parameter name="customerInsightsGroup"
                description="The name of the customer being planned for. This is a user-defined value. Type: string"/>
     <parameter name="locationCountryFilters"
-               description="If SUB_COUNTRY_LOCATION attributes are one of the requested dimensions and this field is present, then the SUB_COUNTRY_LOCATION attributes returned will be located in these countries. If this field is absent, then location attributes are not filtered by country. Setting this field when SUB_COUNTRY_LOCATION attributes are not requested will return an error. Type: object (LocationInfo)"/>
+               description="The list of location info objects. If SUB_COUNTRY_LOCATION attributes are one of the requested dimensions and this field is present, then the SUB_COUNTRY_LOCATION attributes returned will be located in these countries. If this field is absent, then location attributes are not filtered by country. Setting this field when SUB_COUNTRY_LOCATION attributes are not requested will return an error. Type: object (LocationInfo)"/>
     <parameter name="youtubeReachLocation"
                description="If present, potential YouTube reach estimates within the specified market will be returned for attributes for which they are available. Reach is only available for the AGE_RANGE, GENDER, AFFINITY_USER_INTEREST and IN_MARKET_USER_INTEREST dimensions, and may not be available for every attribute of those dimensions in every market. Type: object (LocationInfo)"/>
     <sequence>
@@ -37,7 +37,7 @@
             <format>
                 <![CDATA[{
                                                                                         <#if (args.arg1)?has_content>
-                                    "dimensions": "${args.arg1}",                                </#if>
+                                    "dimensions": ${args.arg1},                                </#if>
                                                                                             <#if (args.arg2)?has_content>
                                     "queryText": "${args.arg2}",                                </#if>
                                                                                             <#if (args.arg3)?has_content>

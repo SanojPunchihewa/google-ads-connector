@@ -67,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "Conversations that are being appended. Type: object (Conversation)"
+                    "helpTip": "List of conversations that are being appended. Type: object (Conversation)"
                   }
                 }
               ]

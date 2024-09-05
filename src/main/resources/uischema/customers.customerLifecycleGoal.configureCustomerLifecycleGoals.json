@@ -78,7 +78,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",
-                    "helpTip": "Optional. If true, the request is validated but not executed. Only errors are returned, not results. Type: boolean"
+                    "helpTip": "If true, the request is validated but not executed. Only errors are returned, not results. Type: boolean"
                   }
                 }
               ]

@@ -67,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "true",
-                    "helpTip": "The types of attributes to be returned. Type: enum (AudienceInsightsDimension)"
+                    "helpTip": "The list of types of attributes to be returned. Type: enum (AudienceInsightsDimension)"
                   }
                 },
                 {
@@ -100,7 +100,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",
-                    "helpTip": "If SUB_COUNTRY_LOCATION attributes are one of the requested dimensions and this field is present, then the SUB_COUNTRY_LOCATION attributes returned will be located in these countries. If this field is absent, then location attributes are not filtered by country. Setting this field when SUB_COUNTRY_LOCATION attributes are not requested will return an error. Type: object (LocationInfo)"
+                    "helpTip": "The list of location info objects."
                   }
                 },
                 {

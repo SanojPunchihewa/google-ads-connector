@@ -78,7 +78,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",
-                    "helpTip": "Optional. If true, successful operations will be carried out and invalid operations will return errors. If false, all operations will be carried out in one transaction if and only if they are all valid. Default is false. Type: boolean"
+                    "helpTip": "If true, successful operations will be carried out and invalid operations will return errors. If false, all operations will be carried out in one transaction if and only if they are all valid. Default is false. Type: boolean"
                   }
                 },
                 {
@@ -89,7 +89,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",
-                    "helpTip": "Optional. If true, the request is validated but not executed. Only errors are returned, not results. Type: boolean"
+                    "helpTip": "If true, the request is validated but not executed. Only errors are returned, not results. Type: boolean"
                   }
                 }
               ]

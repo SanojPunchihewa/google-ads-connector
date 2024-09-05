@@ -31,9 +31,9 @@
             <format>
                 <![CDATA[{
                                                                                         <#if (args.arg1)?has_content>
-                                    "keywords": "${args.arg1}",                                </#if>
+                                    "keywords": ${args.arg1},                                </#if>
                                                                                             <#if (args.arg2)?has_content>
-                                    "adGroups": "${args.arg2}"                                </#if>
+                                    "adGroups": ${args.arg2}                                </#if>
                                                                                         }]]>
             </format>
             <args>

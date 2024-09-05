@@ -89,7 +89,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",
-                    "helpTip": "The resource names of the location to target. Maximum is 10. An empty list MAY be used to specify all targeting geos. Type: string"
+                    "helpTip": "The list of resource names of the location to target. Maximum is 10. An empty list MAY be used to specify all targeting geos. Type: string"
                   }
                 },
                 {

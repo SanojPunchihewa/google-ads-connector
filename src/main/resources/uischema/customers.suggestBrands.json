@@ -67,7 +67,7 @@
                     "inputType": "stringOrExpression",
                     "defaultValue": "",
                     "required": "false",
-                    "helpTip": "Optional. Ids of the brands already selected by advertisers. They will be excluded in response. These are expected to be brand ids not brand names. Type: string"
+                    "helpTip": "List of Ids of the brands already selected by advertisers. They will be excluded in response. These are expected to be brand ids not brand names. Type: string"
                   }
                 },
                 {

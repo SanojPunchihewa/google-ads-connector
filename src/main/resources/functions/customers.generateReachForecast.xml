@@ -24,7 +24,7 @@
     <parameter name="targeting"
                description="The targeting to be applied to all products selected in the product mix. Type: object (Targeting)"/>
     <parameter name="plannedProducts"
-               description="Required. The products to be forecast. The max number of allowed planned products is 15. Type: object (PlannedProduct)"/>
+               description="Required. The list of products to be forecast. The max number of allowed planned products is 15. Type: object (PlannedProduct)"/>
     <parameter name="forecastMetricOptions"
                description="Controls the forecast metrics returned in the response. Type: object (ForecastMetricOptions)"/>
     <parameter name="currencyCode"

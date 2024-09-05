@@ -19,7 +19,7 @@
     <parameter name="customerId" description="The ID of the customer with the recommendation."/>
     <!-- Request Body Parameter List -->
     <parameter name="geoTargetConstants"
-               description="The resource names of the location to target. Maximum is 10. An empty list MAY be used to specify all targeting geos. Type: string"/>
+               description="The list of resource names of the location to target. Maximum is 10. An empty list MAY be used to specify all targeting geos. Type: string"/>
     <parameter name="includeAdultKeywords"
                description="If true, adult keywords will be included in response. The default value is false. Type: boolean"/>
     <parameter name="pageToken"
@@ -29,7 +29,7 @@
     <parameter name="keywordPlanNetwork"
                description="Targeting network. If not set, Google Search And Partners Network will be used. Type: enum (KeywordPlanNetwork)"/>
     <parameter name="keywordAnnotation"
-               description="The keyword annotations to include in response. Type: enum (KeywordPlanKeywordAnnotation)"/>
+               description="The list of keyword annotations to include in response. Type: enum (KeywordPlanKeywordAnnotation)"/>
     <parameter name="aggregateMetrics"
                description="The aggregate fields to include in response. Type: object (KeywordPlanAggregateMetrics)"/>
     <parameter name="historicalMetricsOptions"
@@ -53,7 +53,7 @@
             <format>
                 <![CDATA[{
                                                                                         <#if (args.arg1)?has_content>
-                                    "geoTargetConstants": "${args.arg1}",                                </#if>
+                                    "geoTargetConstants": ${args.arg1},                                </#if>
                                                                                             <#if (args.arg2)?has_content>
                                     "includeAdultKeywords": "${args.arg2}",                                </#if>
                                                                                             <#if (args.arg3)?has_content>
@@ -63,7 +63,7 @@
                                                                                             <#if (args.arg5)?has_content>
                                     "keywordPlanNetwork": "${args.arg5}",                                </#if>
                                                                                             <#if (args.arg6)?has_content>
-                                    "keywordAnnotation": "${args.arg6}",                                </#if>
+                                    "keywordAnnotation": ${args.arg6},                                </#if>
                                                                                             <#if (args.arg7)?has_content>
                                     "aggregateMetrics": ${args.arg7},                                </#if>
                                                                                             <#if (args.arg8)?has_content>

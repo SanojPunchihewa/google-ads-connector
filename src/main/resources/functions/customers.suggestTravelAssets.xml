@@ -21,7 +21,7 @@
     <parameter name="languageOption"
                description="Required. The language specifications in BCP 47 format (for example, en-US, zh-CN, etc.) for the asset suggestions. Text will be in this language. Usually matches one of the campaign target languages. Type: string"/>
     <parameter name="placeIds"
-               description="The Google Maps Place IDs of hotels for which assets are requested. Seehttps://developers.google.com/places/web-service/place-idfor more information. Type: string"/>
+               description="The list of Google Maps Place IDs of hotels for which assets are requested. See https://developers.google.com/places/web-service/place-idfor more information. Type: string"/>
     <sequence>
         <class name="org.wso2.carbon.google.ads.connector.RestURLBuilder">
             <property name="operationPath" value="/v17/customers/{customerId}:suggestTravelAssets"/>
@@ -33,7 +33,7 @@
                                                                                         <#if (args.arg1)?has_content>
                                     "languageOption": "${args.arg1}",                                </#if>
                                                                                             <#if (args.arg2)?has_content>
-                                    "placeIds": "${args.arg2}"                                </#if>
+                                    "placeIds": ${args.arg2}                                </#if>
                                                                                         }]]>
             </format>
             <args>
